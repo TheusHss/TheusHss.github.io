@@ -5,81 +5,121 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="index.css">
-    <title>Poesias</title>
+    <link rel="stylesheet" href="globalStyle.css">
+    <link rel="shortcut icon" href="img/dove.svg" type="image/x-icon">
+    <title>Theosia</title>
 </head>
 
-<body>
-    <header>
-
-        <div class="cabecario">
-            <img class="menu" id="menuId" src="img/lista.svg" alt="">
-            <h1>
-                ------Poesias------
-            </h1>
-            <img class="caneta" src="img/caneta.png" alt="">
+<body id="body">
+    <div id="bv" class="bemVindo">
+        <div class="matheus">
+            <h1>Bem Vindo ao Theosia</h1>
+            <img class="dove" src="img/dove.svg" alt="">
         </div>
-    </header>
-    
-        <!-- <div class="boxMenu">
-            Teste
-        </div> -->
+        <div class="containerVindo">
+            
+            <div class="box">
+                <h1 class="title"> Theosia Um Site Para Todos</h1>
+                <h2>
+                    Theosia é um site de poesias <br>
+                    gratuito para ler, todas poesias <br>
+                    foram criadas por Matheus Henrique,<br>
+                    Que escreve apenas por prazer. <br>
+                    <h1>Espero que goste!</h1>
+                </h2>
+            </div>
+            <img class="matheusImg" src="img/matheus.png" alt="">
+            <button onclick="prosseguir()" class="btn">Proseguir</button>
+        </div>
+    </div>
 
-      
+    <div style="display: none;" id="tudo">
+
+        <header>
+            <div class="cabecario">
+                <img onclick="menu()" class="menu" id="menuId" src="img/lista.svg" alt="">
+                <h1>
+                    ------Poesias------
+                </h1>
+                <ul>
+                    <li>
+                        <a href="index.html">Home</a>
+                        <a href="">Login</a>
+                        <a href="">Contato</a>
+                    </li>
+                </ul>
+                <img class="caneta" src="img/caneta.png" alt="">
+            </div>
+        </header>
+
+            <!-- <div class="boxMenu">
+                Teste
+            </div> -->
+        <div class="divisaUmPai">
+
+            <div class="divisaUm">
+                <h1>Favoritas</h1>
+            </div>
+        </div>
+
         <div class="container">
             <div class="boxPrimeira">
-                <h1 class="title"> titulo poesia </h1>
+                <h1 class="title"> Olhar de cima </h1>
                 <h2>
-                    A vida vem da terra,
-                    a planta cresce nela,
-                    o mundo precisa dela
-                </h2>
-            </div>
-         
-            <div class="boxPrimeira">
-                <h1 class="title"> titulo poesia </h1>
-                <h2>
-                    A vida vem da terra,
-                    a planta cresce nela,
-                    o mundo precisa dela
-                </h2>
-            </div>
-            <div class="boxPrimeira">
-                <h1 class="title"> titulo poesia </h1>
-                <h2>
-                    A vida vem da terra,
-                    a planta cresce nela,
-                    o mundo precisa dela
-                </h2>
-            </div>
-            <div class="boxPrimeira">
-                <h1 class="title"> titulo poesia </h1>
-                <h2>
-                    A vida vem da terra,
-                    a planta cresce nela,
-                    o mundo precisa dela
-                </h2>
-            </div>
-            <div class="boxPrimeira">
-                <h1 class="title"> titulo poesia </h1>
-                <h2>
-                    A vida vem da terra,
-                    a planta cresce nela,
-                    o mundo precisa dela
-                </h2>
-            </div>
-            <div class="boxPrimeira">
-                <h1 class="title"> titulo poesia </h1>
-                <h2>
-                    A vida vem da terra,
-                    a planta cresce nela,
-                    o mundo precisa dela
-                </h2>
-            </div>
-         
-        </div>
 
+                </h2>
+            </div>
+
+            <div class="boxPrimeira">
+                <h1 class="title"> titulo poesia </h1>
+                <h2>
+                    A vida vem da terra,
+                    a planta cresce nela,
+                    o mundo precisa dela
+                </h2>
+            </div>
+            <div class="boxPrimeira">
+                <h1 class="title"> titulo poesia </h1>
+                <h2>
+                    A vida vem da terra,
+                    a planta cresce nela,
+                    o mundo precisa dela
+                </h2>
+            </div>
+            <div class="boxPrimeira">
+                <h1 class="title"> titulo poesia </h1>
+                <h2>
+                    A vida vem da terra,
+                    a planta cresce nela,
+                    o mundo precisa dela
+                </h2>
+            </div>
+            <div class="boxPrimeira">
+                <h1 class="title"> titulo poesia </h1>
+                <h2>
+                    A vida vem da terra,
+                    a planta cresce nela,
+                    o mundo precisa dela
+                </h2>
+            </div>
+            <div class="boxPrimeira">
+                <h1 class="title"> titulo poesia </h1>
+                <h2>
+                    A vida vem da terra,
+                    a planta cresce nela,
+                    o mundo precisa dela
+                </h2>
+            </div>
+
+        </div>
+    </div>
 </body>
 
 </html>
 <script>
+    function prosseguir() {
+tudo.style.display='block'
+bv.style.display='none'
+
+    }
 </script>
