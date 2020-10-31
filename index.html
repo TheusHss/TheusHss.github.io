@@ -17,7 +17,7 @@
             <img class="dove" src="img/dove.svg" alt="">
         </div>
         <div class="containerVindo">
-            
+
             <div class="box">
                 <h1 class="title"> Theosia Um Site Para Todos</h1>
                 <h2>
@@ -28,8 +28,8 @@
                     <h1>Espero que goste!</h1>
                 </h2>
             </div>
-            <img class="matheusImg" src="img/matheus.png" alt="">
-            <button onclick="prosseguir()" class="btn">Proseguir</button>
+            <img id="matheusIdImg" class="matheusImg" src="img/matheus.png" alt="">
+            <button onclick="prosseguir()" class="btn">Prosseguir</button>
         </div>
     </div>
 
@@ -52,7 +52,7 @@
             </div>
         </header>
 
-            <!-- <div class="boxMenu">
+        <!-- <div class="boxMenu">
                 Teste
             </div> -->
         <div class="divisaUmPai">
@@ -65,8 +65,11 @@
         <div class="container">
             <div class="boxPrimeira">
                 <h1 class="title"> Olhar de cima </h1>
-                <h2>
-
+                <h2>Todos me escutaram,
+                    Mas ninguém me ouviu,
+                    Foram no caminho errado,
+                    E o mal os consumio
+                    <a href="">Ver mais...</a>
                 </h2>
             </div>
 
@@ -117,9 +120,16 @@
 
 </html>
 <script>
-    function prosseguir() {
-tudo.style.display='block'
-bv.style.display='none'
+  
 
+    var sumir;
+    function prosseguir() {
+        matheusIdImg.src="img/matheusPic.png" 
+        
+        sumir = setTimeout(sumaFunc, 500)
+        function sumaFunc() {
+            bv.style.display = 'none'
+            tudo.style.display = 'block'
+        }
     }
 </script>
