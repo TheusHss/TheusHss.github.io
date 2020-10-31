@@ -69,6 +69,10 @@ body {
         margin-top: 50%;
         height: 40vh;
     }
+    to{
+        margin: 0;
+        position: absolute;
+    }
 }
 
 .box {
