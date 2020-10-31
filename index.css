@@ -3,6 +3,7 @@ body {
     background-image: url('img/pomba.jpg');
     background-attachment: fixed;
     background-size: cover;
+    
 }
 .body2{
     background-image: url('img/flor.webp');
@@ -26,6 +27,7 @@ body {
     background-color: rgb(233, 255, 205);
     font-weight: bold;
     font-size: 250%;
+    outline: none;
 }
 
 .btn:hover {
@@ -110,10 +112,13 @@ body {
 .paiNovidades {
     align-items: center;
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    color: yellow;
 }
 
 .novidades {
+    justify-content: center;
     align-items: center;
     color: yellow;
     display: flex;
@@ -122,6 +127,14 @@ body {
     height: 40vh;
     width: 90%;
     border: 2px solid white;
+}
+.novidadeImg{
+    width: 60%;
+    height: 100%;
+    cursor: pointer;
+}
+.novidadeImg:hover{
+    opacity: 0.5;
 }
 
 @keyframes bvNovidades {}
@@ -143,7 +156,8 @@ body {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    height: 100vh;
+    align-items: center;
+    height: 100%;
     width: 100%;
 }
 
@@ -152,10 +166,14 @@ body {
     font-size: 1rem;
     margin: 5%;
     color: white;
-    height: 50%;
-    width: 250px;
+    height: 25%;
+    width: 300px;
     background-color: rgba(0, 0, 0, 0.623);
     border: white solid 2px;
+    display: flex;
+    flex-direction:column ;
+    align-items: center;
+    justify-content: space-evenly;
 }
 
 .boxPrimeira h1 {
@@ -187,6 +205,12 @@ body {
 }
 
 @media only screen and (max-width: 700px) {
+.novidadeImg{
+    width: 100%;
+}
+    .btn{
+        font-size: 150%;
+    }
     .boxMenuAtivo{
         width: 100%;
     }
