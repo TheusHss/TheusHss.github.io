@@ -61,6 +61,14 @@ body {
     border-radius: 45%;
     background-color: yellow;
     height: 8vh;
+    animation: doveMove 3s;
+}
+@keyframes doveMove{
+    from{
+        position: absolute;
+        margin-top: 50%;
+        height: 40vh;
+    }
 }
 
 .box {
@@ -189,15 +197,18 @@ body {
 
 .boxMenu {
     color: white;
-    display: flex;
     left: -20%;
     margin-top: 7px;
     position: fixed;
     height: 100%;
     width: 20%;
-    background-image: url('img/azulButterfly.webp');
+    background-color: black;
     background-size: cover;
-    transition: left 0.9s;
+    transition: left 1s;
+}
+.boxMenu h1{
+    cursor: pointer;
+
 }
 
 .boxMenuAtivo {
