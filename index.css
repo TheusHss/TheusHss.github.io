@@ -1,13 +1,19 @@
-body{
+body {
     margin: 0px;
-    background-image: url('img/flor.webp');
+    background-image: url('img/pomba.jpg');
     background-attachment: fixed;
     background-size: cover;
 }
-.bemVindo{
+.body2{
+    background-image: url('img/flor.webp');
+
+}
+
+.bemVindo {
     width: 100%;
 }
-.btn{
+
+.btn {
     height: 10vh;
     color: black;
     border: black solid 2px;
@@ -21,39 +27,44 @@ body{
     font-weight: bold;
     font-size: 250%;
 }
-.btn:hover{
+
+.btn:hover {
     background-color: rgb(217, 255, 0);
     opacity: 0.3;
     color: blanchedalmond;
 }
-.matheusImg{
+
+.matheusImg {
     height: 92vh;
 }
-    .containerVindo{
-        flex-wrap: wrap;
-        justify-content: space-evenly;
-        display: flex;
-        align-items: center;
-    }
-.matheus{
+
+.containerVindo {
+    flex-wrap: wrap;
+    justify-content: space-evenly;
     display: flex;
- justify-content: space-evenly;
- align-items: center;
+    align-items: center;
+}
+
+.matheus {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
     width: 100%;
     color: yellow;
     background-color: black;
     height: 8vh;
 }
 
-.dove{
+.dove {
     border-radius: 45%;
     background-color: yellow;
     height: 8vh;
 }
-.box{
+
+.box {
     border-radius: 5%;
     font-size: 150%;
-    margin: 5%;
+    margin: 2%;
     color: rgb(229, 255, 0);
     width: 60%;
     height: 40%;
@@ -61,55 +72,84 @@ body{
     background-color: rgba(0, 0, 0, 0.623);
     border: white solid 2px;
 }
-.box h1{
+
+.box h1 {
     background-color: rgba(255, 255, 255, 0.514);
     text-align: center;
     color: rgb(0, 0, 0);
 }
-.menu{
+
+.menuc {
+    cursor: pointer;
     height: 8vh;
 }
-.caneta{
+
+.caneta {
     height: 8vh;
-    animation: caneta 1s  infinite alternate;
+    animation: caneta 1s infinite alternate;
 }
-@keyframes caneta{
+
+@keyframes caneta {
     from {
         transform: rotateY(0deg);
-      }
-      to {
+    }
+    to {
         transform: rotateY(360deg);
-      }
+    }
 }
-@keyframes moveMenu{
+
+@keyframes moveMenu {
     from {
         transform: rotate(0deg);
-      }
-      to {
+    }
+    to {
         transform: rotate(360deg);
-      }
+    }
 }
-.divisaUmPai{
+
+.paiNovidades {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.novidades {
+    align-items: center;
+    color: yellow;
+    display: flex;
+    margin: 2%;
+    background-color: rgba(0, 0, 0, 0.76);
+    height: 40vh;
+    width: 90%;
+    border: 2px solid white;
+}
+
+@keyframes bvNovidades {}
+
+.divisaUmPai {
     height: 10%;
     width: 100%;
 }
-.divisaUm{
+
+.divisaUm {
     width: 100%;
-background-color: black;
-color: blanchedalmond;
-font-size: 4vh;
-height: 10%;
+    background-color: black;
+    color: blanchedalmond;
+    font-size: 4vh;
+    height: 10%;
 }
-.container{
-    display: flex ;
+
+.container {
+    display: flex;
     justify-content: center;
- flex-wrap:wrap ;
+    flex-wrap: wrap;
     height: 100vh;
     width: 100%;
 }
-.boxPrimeira{
+
+.boxPrimeira {
     border-radius: 5%;
-    font-size: 100%;
+    font-size: 1rem;
     margin: 5%;
     color: white;
     height: 50%;
@@ -117,27 +157,44 @@ height: 10%;
     background-color: rgba(0, 0, 0, 0.623);
     border: white solid 2px;
 }
-.boxPrimeira h1{
+
+.boxPrimeira h1 {
+    font-size: 2rem;
     background-color: rgba(255, 255, 255, 0.514);
     text-align: center;
     color: yellow;
 }
-.boxPrimeira a{
+
+.boxPrimeira a {
     color: rgb(238, 255, 0);
 }
-.boxMenu{
+
+.boxMenu {
+    color: white;
+    display: flex;
+    left: -20%;
     margin-top: 7px;
     position: fixed;
     height: 100%;
     width: 20%;
-    background-color: rgba(0, 0, 0, 0.623);
+    background-image: url('img/azulButterfly.webp');
+    background-size: cover;
+    transition: left 0.9s;
 }
 
-@media only screen and (max-width: 700px){
-  .box{
-      font-size: 100%;
-  }
-  .box h1{
-      font-size: 200%;
-  }
+.boxMenuAtivo {
+    left: 0%;
+}
+
+@media only screen and (max-width: 700px) {
+    .boxMenuAtivo{
+        width: 100%;
+    }
+    .matheus {
+        font-size: 50%;
+    }
+    .box {
+        width: 100%;
+        font-size: 100%;
+    }
 }

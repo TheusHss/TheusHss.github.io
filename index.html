@@ -37,9 +37,9 @@
 
         <header>
             <div class="cabecario">
-                <img onclick="menu()" class="menu" id="menuId" src="img/lista.svg" alt="">
+                <img onclick="menu()" class="menuc" id="menuId" src="img/lista.svg" alt="">
                 <h1>
-                    ------Poesias------
+                ------Poesias------
                 </h1>
                 <ul>
                     <li>
@@ -51,81 +51,92 @@
                 <img class="caneta" src="img/caneta.png" alt="">
             </div>
         </header>
-
-        <!-- <div class="boxMenu">
-                Teste
-            </div> -->
-        <div class="divisaUmPai">
-
-            <div class="divisaUm">
-                <h1>Favoritas</h1>
-            </div>
+        <div id="boxMenuId" class="boxMenu">
+            Teste
         </div>
+        <h1>
+            <div class="paiNovidades">
+                <div class="novidades">
 
-        <div class="container">
-            <div class="boxPrimeira">
-                <h1 class="title"> Olhar de cima </h1>
-                <h2>Todos me escutaram,
-                    Mas ninguém me ouviu,
-                    Foram no caminho errado,
-                    E o mal os consumio
-                    <a href="">Ver mais...</a>
-                </h2>
+                </div>
             </div>
 
-            <div class="boxPrimeira">
-                <h1 class="title"> titulo poesia </h1>
-                <h2>
-                    A vida vem da terra,
-                    a planta cresce nela,
-                    o mundo precisa dela
-                </h2>
-            </div>
-            <div class="boxPrimeira">
-                <h1 class="title"> titulo poesia </h1>
-                <h2>
-                    A vida vem da terra,
-                    a planta cresce nela,
-                    o mundo precisa dela
-                </h2>
-            </div>
-            <div class="boxPrimeira">
-                <h1 class="title"> titulo poesia </h1>
-                <h2>
-                    A vida vem da terra,
-                    a planta cresce nela,
-                    o mundo precisa dela
-                </h2>
-            </div>
-            <div class="boxPrimeira">
-                <h1 class="title"> titulo poesia </h1>
-                <h2>
-                    A vida vem da terra,
-                    a planta cresce nela,
-                    o mundo precisa dela
-                </h2>
-            </div>
-            <div class="boxPrimeira">
-                <h1 class="title"> titulo poesia </h1>
-                <h2>
-                    A vida vem da terra,
-                    a planta cresce nela,
-                    o mundo precisa dela
-                </h2>
+            <div class="divisaUmPai">
+
+                <div class="divisaUm">
+                    <h1>Favoritas</h1>
+                </div>
             </div>
 
-        </div>
+            <div class="container">
+                <div class="boxPrimeira">
+                    <h1 class="title"> Olhar de cima </h1>
+                    <h2>Todos me escutaram,
+                        Mas ninguém me ouviu,
+                        Foram no caminho errado,
+                        E o mal os consumio
+                        <a href="">Ver mais...</a>
+                    </h2>
+                </div>
+
+                <div class="boxPrimeira">
+                    <h1 class="title"> titulo poesia </h1>
+                    <h2>
+                        A vida vem da terra,
+                        a planta cresce nela,
+                        o mundo precisa dela
+                    </h2>
+                </div>
+                <div class="boxPrimeira">
+                    <h1 class="title"> titulo poesia </h1>
+                    <h2>
+                        A vida vem da terra,
+                        a planta cresce nela,
+                        o mundo precisa dela
+                    </h2>
+                </div>
+                <div class="boxPrimeira">
+                    <h1 class="title"> titulo poesia </h1>
+                    <h2>
+                        A vida vem da terra,
+                        a planta cresce nela,
+                        o mundo precisa dela
+                    </h2>
+                </div>
+                <div class="boxPrimeira">
+                    <h1 class="title"> titulo poesia </h1>
+                    <h2>
+                        A vida vem da terra,
+                        a planta cresce nela,
+                        o mundo precisa dela
+                    </h2>
+                </div>
+                <div class="boxPrimeira">
+                    <h1 class="title"> titulo poesia </h1>
+                    <h2>
+                        A vida vem da terra,
+                        a planta cresce nela,
+                        o mundo precisa dela
+                    </h2>
+                </div>
+
+            </div>
     </div>
 </body>
 
 </html>
 <script>
+    function menu() {
+      document.querySelector('#boxMenuId').classList.toggle("boxMenuAtivo")
+    }
+
     var sumir;
     function prosseguir() {
-        matheusIdImg.src="img/matheusPic.png" 
-        
+        matheusIdImg.src = "img/matheusPic.png"
+
         sumir = setTimeout(sumaFunc, 500)
         function sumaFunc() {
+            document.querySelector('#body').classList.add("body2")
             bv.style.display = 'none'
             tudo.style.display = 'block'
         }
