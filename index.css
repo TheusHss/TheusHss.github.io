@@ -198,28 +198,52 @@ body {
 .boxPrimeira a {
     color: rgb(238, 255, 0);
 }
-
 .boxMenu {
+    flex-wrap: nowrap;
     color: white;
-    left: -20%;
+    left: -100%;
     margin-top: 7px;
     position: fixed;
     height: 100%;
     width: 20%;
-    background-color: black;
+    background-color: rgba(0, 0, 0, 0.901);
     background-size: cover;
     transition: left 1s;
 }
+
 .boxMenu h1{
+    font-size: 1.5rem;
     cursor: pointer;
 
 }
 
+
 .boxMenuAtivo {
     left: 0%;
+    width: 30%;
 }
-
-@media only screen and (max-width: 700px) {
+.cadLog{
+    height: 10%;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.527);
+}
+.cadLog h3{
+    color: black;
+}
+.btn_cadLog{
+    cursor: pointer;
+    outline: none;
+    height: 40% ;
+    width: 20%;
+    color: white;
+    background-color: black;
+    transition: 0.5s;
+}
+.btn_cadLog:hover{
+    background-color: yellow;
+    opacity: 0.3;
+}
+@media only screen and (max-width: 900px) {
 .novidadeImg{
     width: 100%;
 }
