@@ -59,9 +59,9 @@
                     <button class="btn_cadLog">Cadastrar</button>
                 </h3>
             </div>
-            Teste v1.6
+            Teste v2.9
+            <h1 onclick="todasPoesias()">Todas Poesias</h1> <br>
             <h1>Temas</h1> <br>
-            <h1></h1> <br>
             <h1>Sobre o site</h1> <br>
             <h1>Colaboradores</h1> <br>
             <h1>Sobre o Autor</h1>
@@ -152,22 +152,4 @@
 </body>
 
 </html>
-<script>
-
-
-    function menu() {
-        document.querySelector('#boxMenuId').classList.toggle("boxMenuAtivo")
-    }
-
-    var sumir;
-    function prosseguir() {
-        matheusIdImg.src = "img/matheusPic.png"
-
-        sumir = setTimeout(sumaFunc, 500)
-        function sumaFunc() {
-            document.querySelector('#body').classList.add("body2")
-            bv.style.display = 'none'
-            tudo.style.display = 'block'
-        }
-    }
-</script>
+<script src="script.js"></script>

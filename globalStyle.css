@@ -29,11 +29,95 @@ header h1{
  text-decoration: none;
  color: black;
 }
+.boxMenu {
+    border-right:2px rgb(0, 0, 0) solid ;
+    flex-wrap: nowrap;
+    color: rgb(255, 255, 255);
+    left: -100%;
+    margin-top: 7px;
+    position: fixed;
+    height: 100%;
+    width: 20%;
+    background-size: cover;
+    transition: left 1s;
+    background-image: url(/img/dove.svg);
+    background-color: rgba(255, 255, 255, 0.863);
+}
+
+.boxMenu h1{
+    font-size: 1.5rem;
+    cursor: pointer;
+    text-align: center;
+    transition: 1s;
+    background-color: black;
+}
+.boxMenu h1:hover{
+    background-color: rgba(255, 255, 255, 0.527);
+    color: black;
+    opacity: 0.9;
+}
+
+.boxMenuAtivo {
+    left: 0%;
+    width: 30%;
+}
+.cadLog{
+    height: 10%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.815);
+}
+.cadLog h3{
+    color: rgb(255, 249, 249);
+}
+.btn_cadLog{
+    cursor: pointer;
+    outline: none;
+    height: 40% ;
+    width: 20%;
+    color: white;
+    background-color: black;
+    transition: 0.5s;
+}
+.btn_cadLog:hover{
+    background-color: yellow;
+    opacity: 0.3;
+}
+
+.menuc {
+    cursor: pointer;
+    height: 8vh;
+}
+
+.caneta {
+    height: 8vh;
+    animation: caneta 1s infinite alternate;
+}
+
+@keyframes caneta {
+    from {
+        transform: rotateY(0deg);
+    }
+    to {
+        transform: rotateY(360deg);
+    }
+}
+
+@keyframes moveMenu {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
 @media only screen and (max-width: 800px){
     .cabecario{
         font-size: 0.7rem;
     }
     .cabecario li a{
         font-size: 0.7rem;
+    }
+    .boxMenuAtivo{
+        width: 100%;
     }
 }
