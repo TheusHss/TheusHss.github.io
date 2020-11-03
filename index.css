@@ -15,24 +15,26 @@ body {
 
 .btn {
     height: 10vh;
-    color: black;
+    color: rgb(251, 255, 0);
     border: black solid 2px;
+    box-shadow: 0px 0px 12px 2px purple;
     border-radius: 45vh;
     transition: 1s;
     cursor: pointer;
     width: 98%;
     letter-spacing: 15px;
     outline: none;
-    background-color: rgb(233, 255, 205);
+    background-color: rgb(0, 0, 0);
     font-weight: bold;
     font-size: 250%;
     outline: none;
 }
 
 .btn:hover {
+    box-shadow: 0px 0px 12px 2px yellow;
     background-color: purple;
     opacity: 0.3;
-    color: blanchedalmond;
+    color: rgb(0, 0, 0);
 }
 
 .matheusImg {
@@ -52,6 +54,7 @@ body {
     align-items: center;
     width: 100%;
     color: yellow;
+    box-shadow: 0px 0px 12px 2px purple;
     background-color: black;
     height: 8vh;
 }
@@ -177,6 +180,7 @@ footer {
     background-color: black;
     display: flex;
     justify-content: center;
+    border-top: yellow solid 2px;
 }
 
 .containerFooter {
@@ -186,6 +190,8 @@ footer {
     justify-content: space-around;
     align-items: center;
     width: 90%;
+  border-right: 2px yellow solid;
+  border-left: 2px yellow solid;
 }
 
 .boxFooter {
@@ -231,6 +237,9 @@ footer {
 }
 
 @media only screen and (max-width: 900px) {
+    .containerFooter{
+flex-direction: column-reverse;
+    }
     .novidadeImg {
         width: 100%;
     }

@@ -1,4 +1,5 @@
 function menu() {
+    document.querySelector('#menuId').classList.toggle("menuClass")
     document.querySelector('#boxMenuId').classList.toggle("boxMenuAtivo")
 }
 
