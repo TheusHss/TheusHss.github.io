@@ -16,3 +16,16 @@ function prosseguir() {
 function todasPoesias(){
     window.location.href="poesias/Todas.html"
 }
+function face(){
+    window.location.href="https://www.facebook.com/matheus.tophenrique.3/"
+    
+}
+function insta(){
+    window.location.href="https://www.instagram.com/theu.hss/"
+    
+}
+
+function git(){
+    window.location.href="https://github.com/TheusHss"
+
+}

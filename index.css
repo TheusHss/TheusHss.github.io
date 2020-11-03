@@ -174,16 +174,18 @@ body {
 
 footer {
     width: 100%;
+    background-color: black;
+    display: flex;
+    justify-content: center;
 }
 
 .containerFooter {
     display: flex;
+    background-color: purple;
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
-    background-color: black;
-    width: 100%;
-    height: 100%;
+    width: 90%;
 }
 
 .boxFooter {
@@ -199,27 +201,31 @@ footer {
     transition: 1s;
 }
 
+.boxFooter img:hover {
+    background-color: yellow;
+    box-shadow: 0px 0px 12px 2px yellow;
+}
+
 .boxFooter p:hover {
-    background-color: purple;
-    box-shadow: 0px 0px 12px 2px purple;
+    color: purple;
+    background-color: yellow;
+    box-shadow: 0px 0px 12px 2px yellow;
 }
 
 .boxFooter img {
+    color: white;
     cursor: pointer;
-    background-color: white;
-    height: 3vh;
-    transition: 500ms;
-}
-
-.boxFooter img:hover {
     background-color: purple;
     box-shadow: 0px 0px 12px 2px purple;
+    height: 3vh;
+    transition: 500ms;
 }
 
 .euFooter {
     border-radius: 45vh;
     border: yellow solid 4px;
-    height: 27vh;
+    box-shadow: 0px 0px 12px 2px yellow;
+    height: 24vh;
     background-image: url("img/azulButterfly.webp");
     background-size: cover;
 }
