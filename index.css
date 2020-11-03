@@ -3,11 +3,10 @@ body {
     background-image: url('img/pomba.jpg');
     background-attachment: fixed;
     background-size: cover;
-    
 }
-.body2{
-    background-image: url('img/flor.webp');
 
+.body2 {
+    background-image: url('img/flor.webp');
 }
 
 .bemVindo {
@@ -63,13 +62,14 @@ body {
     height: 8vh;
     animation: doveMove 3s;
 }
-@keyframes doveMove{
-    from{
+
+@keyframes doveMove {
+    from {
         position: absolute;
         margin-top: 50%;
         height: 40vh;
     }
-    to{
+    to {
         margin: 0;
         position: absolute;
     }
@@ -93,7 +93,6 @@ body {
     color: rgb(0, 0, 0);
 }
 
-
 .paiNovidades {
     align-items: center;
     display: flex;
@@ -113,12 +112,13 @@ body {
     border: 2px solid white;
 }
 
-.novidadeImg{
+.novidadeImg {
     width: 60%;
     height: 100%;
     cursor: pointer;
 }
-.novidadeImg:hover{
+
+.novidadeImg:hover {
     opacity: 0.5;
 }
 
@@ -156,7 +156,7 @@ body {
     background-color: rgba(0, 0, 0, 0.623);
     border: white solid 2px;
     display: flex;
-    flex-direction:column ;
+    flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
 }
@@ -172,14 +172,65 @@ body {
     color: rgb(238, 255, 0);
 }
 
-@media only screen and (max-width: 900px) {
-.novidadeImg{
+footer {
     width: 100%;
 }
-    .btn{
+
+.containerFooter {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    background-color: black;
+    width: 100%;
+    height: 100%;
+}
+
+.boxFooter {
+    margin: 2%;
+    display: flex;
+    flex-direction: column;
+    color: blanchedalmond;
+    text-align: center;
+}
+
+.boxFooter p {
+    cursor: pointer;
+    transition: 1s;
+}
+
+.boxFooter p:hover {
+    background-color: purple;
+    box-shadow: 0px 0px 12px 2px purple;
+}
+
+.boxFooter img {
+    cursor: pointer;
+    background-color: white;
+    height: 3vh;
+    transition: 500ms;
+}
+
+.boxFooter img:hover {
+    background-color: purple;
+    box-shadow: 0px 0px 12px 2px purple;
+}
+
+.euFooter {
+    border-radius: 45vh;
+    border: yellow solid 4px;
+    height: 27vh;
+    background-image: url("img/azulButterfly.webp");
+    background-size: cover;
+}
+
+@media only screen and (max-width: 900px) {
+    .novidadeImg {
+        width: 100%;
+    }
+    .btn {
         font-size: 150%;
     }
-   
     .matheus {
         font-size: 50%;
     }
@@ -187,46 +238,4 @@ body {
         width: 100%;
         font-size: 100%;
     }
-}
-footer{
-    width: 100%;
-}
-.containerFooter{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    background-color: black;
-    width: 100%;
-    height: 100%;
-}
-.boxFooter{
-    display: flex;
-    flex-direction: column;
-    color: blanchedalmond;
-    text-align: center;
-}
-.boxFooter p{
-    cursor: pointer;
-    transition: 1s;
-}
-.boxFooter p:hover{
-    background-color: purple;
-    box-shadow: 0px 0px 12px 2px purple;
-}
-.boxFooter img{
-    cursor: pointer;
-   background-color: white;
-    height: 3vh;
-    transition: 500ms;
-}
-.boxFooter img:hover{
-    background-color: purple;
-    box-shadow: 0px 0px 12px 2px purple;
-}
-.euFooter{
-    border-radius: 45vh;
-    border: yellow solid 4px;
-    height: 27vh;
-    background-image: url("img/azulButterfly.webp");
-    background-size: cover;
 }
