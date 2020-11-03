@@ -19,7 +19,7 @@ header h1 {
     font-size: 1rem;
     position: fixed;
     border-bottom: black solid 2px;
-    background-color: rgba(255, 240, 240, 0.904);
+    background-color: purple;
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -31,7 +31,7 @@ header h1 {
     font-size: 1rem;
     margin-right: 8px;
     text-decoration: none;
-    color: black;
+    color: rgb(217, 255, 0);
 }
 
 .boxMenu {
@@ -45,7 +45,7 @@ header h1 {
     background-size: cover;
     transition: left 1s;
     background-image: url(/img/dove.svg);
-    background-color: rgba(255, 255, 255, 0.884);
+    background-color: rgba(128, 0, 128, 0.651);
 }
 
 .boxMenu h1 {

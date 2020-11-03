@@ -31,7 +31,7 @@ body {
 }
 
 .btn:hover {
-    background-color: rgb(217, 255, 0);
+    background-color: purple;
     opacity: 0.3;
     color: blanchedalmond;
 }
@@ -224,6 +224,8 @@ footer{
     box-shadow: 0px 0px 12px 2px purple;
 }
 .euFooter{
+    border-radius: 45vh;
+    border: yellow solid 4px;
     height: 27vh;
     background-image: url("img/azulButterfly.webp");
     background-size: cover;
