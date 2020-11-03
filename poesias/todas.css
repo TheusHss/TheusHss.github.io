@@ -25,7 +25,7 @@ body{
 }
 .boxPoesia h1{
     color: blanchedalmond;
-    text-align: justify;
+    text-align: center;
 }
 @media only screen and (max-width: 950px){
     .boxPoesia{

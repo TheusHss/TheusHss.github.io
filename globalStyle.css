@@ -1,37 +1,41 @@
-body{
+body {
     margin: 0px;
     cursor: default;
 }
-header{
+
+header {
     height: 8vh;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-header h1{
+
+header h1 {
     letter-spacing: -4px;
 }
-.cabecario{
+
+.cabecario {
     font-size: 1rem;
     position: fixed;
     border-bottom: black solid 2px;
-    background-color: rgba(255, 255, 255, 0.644);
+    background-color: rgba(255, 240, 240, 0.904);
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     height: 10%;
 }
-.cabecario li a{
+
+.cabecario li a {
     font-size: 1rem;
- margin-right: 8px;
- text-decoration: none;
- color: black;
+    margin-right: 8px;
+    text-decoration: none;
+    color: black;
 }
+
 .boxMenu {
-    border-right:2px rgb(0, 0, 0) solid ;
-    flex-wrap: nowrap;
+    border-right: 2px rgb(0, 0, 0) solid;
     color: rgb(255, 255, 255);
     left: -100%;
     margin-top: 7px;
@@ -41,17 +45,19 @@ header h1{
     background-size: cover;
     transition: left 1s;
     background-image: url(/img/dove.svg);
-    background-color: rgba(255, 255, 255, 0.863);
+    background-color: rgba(255, 255, 255, 0.884);
 }
 
-.boxMenu h1{
+.boxMenu h1 {
     font-size: 1.5rem;
     cursor: pointer;
     text-align: center;
     transition: 1s;
+    color: rgb(255, 235, 205);
     background-color: black;
 }
-.boxMenu h1:hover{
+
+.boxMenu h1:hover {
     background-color: rgba(255, 255, 255, 0.527);
     color: black;
     opacity: 0.9;
@@ -61,24 +67,31 @@ header h1{
     left: 0%;
     width: 30%;
 }
-.cadLog{
+
+.cadLog {
     height: 10%;
     width: 100%;
     background-color: rgba(0, 0, 0, 0.815);
 }
-.cadLog h3{
-    color: rgb(255, 249, 249);
+
+.cadLog h3 {
+    color: rgb(255, 235, 205);
+
 }
-.btn_cadLog{
+
+.btn_cadLog {
     cursor: pointer;
     outline: none;
-    height: 40% ;
+    height: 40%;
     width: 20%;
-    color: white;
+    color: rgb(243, 227, 227);
     background-color: black;
     transition: 0.5s;
+    font-style: italic;
+    font-weight: bold;
 }
-.btn_cadLog:hover{
+
+.btn_cadLog:hover {
     background-color: yellow;
     opacity: 0.3;
 }
@@ -110,14 +123,15 @@ header h1{
         transform: rotate(360deg);
     }
 }
-@media only screen and (max-width: 800px){
-    .cabecario{
+
+@media only screen and (max-width: 800px) {
+    .cabecario {
         font-size: 0.7rem;
     }
-    .cabecario li a{
+    .cabecario li a {
         font-size: 0.7rem;
     }
-    .boxMenuAtivo{
+    .boxMenuAtivo {
         width: 100%;
     }
 }

@@ -104,7 +104,6 @@ body {
 
 .novidades {
     justify-content: center;
-    align-items: center;
     color: yellow;
     display: flex;
     margin: 2%;
@@ -113,6 +112,7 @@ body {
     width: 90%;
     border: 2px solid white;
 }
+
 .novidadeImg{
     width: 60%;
     height: 100%;
@@ -187,4 +187,44 @@ body {
         width: 100%;
         font-size: 100%;
     }
+}
+footer{
+    width: 100%;
+}
+.containerFooter{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: black;
+    width: 100%;
+    height: 100%;
+}
+.boxFooter{
+    display: flex;
+    flex-direction: column;
+    color: blanchedalmond;
+    text-align: center;
+}
+.boxFooter p{
+    cursor: pointer;
+    transition: 1s;
+}
+.boxFooter p:hover{
+    background-color: purple;
+    box-shadow: 0px 0px 12px 2px purple;
+}
+.boxFooter img{
+    cursor: pointer;
+   background-color: white;
+    height: 3vh;
+    transition: 500ms;
+}
+.boxFooter img:hover{
+    background-color: purple;
+    box-shadow: 0px 0px 12px 2px purple;
+}
+.euFooter{
+    height: 27vh;
+    background-image: url("img/azulButterfly.webp");
+    background-size: cover;
 }
