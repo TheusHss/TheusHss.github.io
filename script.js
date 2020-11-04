@@ -5,7 +5,7 @@ function menu() {
 
 var sumir;
 function prosseguir() {
-    document.querySelector('.audioC').play();
+
     matheusIdImg.src = "img/matheusPic.png"
     
     sumir = setTimeout(sumaFunc, 500)
@@ -14,28 +14,30 @@ function prosseguir() {
         bv.style.display = 'none'
         tudo.style.display = 'block'
     }
-    var seg=00;
-    var min=00;
-    var hou=00
-paiHr()
-    function paiHr(){
-        seg++
-        if(seg==60){
-            min++
-            seg=00
-        }
-        if(min==60){
-            hou++
-            min=00
-        }
-        segundos.innerHTML=`${seg}`
-        minutos.innerHTML=`${min}`
-        horas.innerHTML=`${hou}`
-      setTimeout(paiHr,1000)
+    paiHr()
+    
+}
+var seg=00;
+var min=00;
+var hou=00
+function paiHr(){
+    seg++
+    if(seg==60){
+        min++
+        seg=00
     }
-   
+    if(min==60){
+        hou++
+        min=00
+    }
+    segundos.innerHTML=`${seg}`
+    minutos.innerHTML=`${min}`
+    horas.innerHTML=`${hou}`
+  setTimeout(paiHr,1000)
 }
 function todasPoesias(){
+    paiHr()
+
     window.location.href="poesias/Todas.html"
 }
 function face(){
@@ -50,7 +52,4 @@ function git(){
     window.location.href="https://github.com/TheusHss"
 
 }
-// function aud(){
-//     document.querySelector('.audioC').play();
-// }
-// window.onload=aud;
+
