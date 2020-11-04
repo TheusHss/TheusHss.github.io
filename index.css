@@ -62,6 +62,7 @@ body {
 .dove {
     border-radius: 45%;
     background-color: yellow;
+    box-shadow: 0px 0px 12px 2px purple;
     height: 8vh;
     animation: doveMove 3s;
 }
@@ -73,7 +74,6 @@ body {
         height: 40vh;
     }
     to {
-        margin: 0;
         position: absolute;
     }
 }

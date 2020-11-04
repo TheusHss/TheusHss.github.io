@@ -16,6 +16,11 @@ header h1 {
     color: yellow;
 
 }
+.tempo{
+    display: flex;
+    align-items: center;
+    color: yellow;
+}
 
 .cabecario {
     box-shadow: 0px 0px 12px 2px purple;

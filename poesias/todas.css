@@ -10,6 +10,7 @@ body{
     justify-content: center;
 }
 .boxPoesia{
+box-shadow: 0px 0px 12px 2px purple;
     margin: 2%;
     width: 30%;
     background-color: rgba(0, 0, 0, 0.658);
@@ -25,6 +26,7 @@ body{
 }
 .boxPoesia h1{
     color: blanchedalmond;
+
     text-align: center;
 }
 @media only screen and (max-width: 950px){
