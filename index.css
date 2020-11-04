@@ -38,12 +38,12 @@ body {
 }
 
 .matheusImg {
-    height: 92vh;
+    height: 80vh;
 }
 
 .containerVindo {
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: center;
     display: flex;
     align-items: center;
 }

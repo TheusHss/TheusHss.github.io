@@ -1,5 +1,5 @@
 body{
-    background-image: url('/img/livro.jpg');
+    background-image: url('../img/livro.jpg');
     background-attachment: fixed;
     background-size: cover;
 }
