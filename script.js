@@ -35,8 +35,8 @@ function paiHr(){
     horas.innerHTML=`${hou}`
   setTimeout(paiHr,1000)
 }
+window.onload=paiHr
 function todasPoesias(){
-    paiHr()
 
     window.location.href="poesias/Todas.html"
 }
@@ -51,5 +51,8 @@ function insta(){
 function git(){
     window.location.href="https://github.com/TheusHss"
 
+}
+function sa(){
+    window.location.href="sobre_a.html"
 }
 
