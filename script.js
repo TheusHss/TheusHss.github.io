@@ -14,7 +14,6 @@ function prosseguir() {
         bv.style.display = 'none'
         tudo.style.display = 'block'
     }
-    paiHr()
     
 }
 var seg=00;
@@ -55,4 +54,7 @@ function git(){
 function sa(){
     window.location.href="sobre_a.html"
 }
+function ss(){
+    window.location.href="sobre_s.html"
 
+}
