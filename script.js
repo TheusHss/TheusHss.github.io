@@ -56,5 +56,9 @@ function sa(){
 }
 function ss(){
     window.location.href="sobre_s.html"
+    
+}
+function cadastro(){
+    window.location.href="cad/cad/cadastro.html"
 
 }

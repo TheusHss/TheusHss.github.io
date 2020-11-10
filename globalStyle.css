@@ -1,6 +1,7 @@
-body {
+*{
+    
     margin: 0px;
-    cursor: default;
+    cursor:default;
 }
 
 header {
@@ -27,7 +28,8 @@ header h1 {
     font-size: 1rem;
     position: fixed;
     border-bottom: yellow solid 2px;
-    background-color: rgb(0, 0, 0);
+    background: rgb(0,0,0);
+background: linear-gradient(270deg, rgba(0,0,0,1) 0%, rgba(38,0,97,1) 54%, rgba(176,0,180,1) 100%);
     width: 100%;
     display: flex;
     justify-content: space-between;
