@@ -6,20 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="globalStyle.css">
     <link rel="stylesheet" href="sobre_a.css">
-    <link rel="shortcut icon" href="../img/dove.svg" type="image/x-icon">
+    <link rel="shortcut icon" href="./img/dove.svg" type="image/x-icon">
     <title>Site</title>
 </head>
 
 <body>
     <header>
         <div class="cabecario">
-            <img onclick="menu()" class="menuc" id="menuId" src="../img/lista.svg" alt="">
+            <img onclick="menu()" class="menuc" id="menuId" src="./img/lista.svg" alt="">
             <h1>
                 Poesias
             </h1>
             <ul>
                 <li>
-                    <a href="../index.html">Home</a>
+                    <a href="index.html">Home</a>
                     <a href="">Login</a>
                     <a href="">Contato</a>
                 </li>
@@ -37,7 +37,7 @@
                 Olá, gostaria de saber mais?
             </h3>
             <div>
-                <button class="btn_cadLog">Cadastrar</button>
+                <button class="btn_cadLog" onclick="cadastro()">Cadastrar</button>
                 <button class="btn_cadLog">Entrar</button>
             </div>
         </div>
@@ -47,7 +47,7 @@
         <h1 onclick="sa()">Sobre o Autor</h1>
     </div>
     <div class="container">
-        <div class="box">
+        <div class="box" style="height: 100vh;">
             <div class="box_in_box">
                 <img src="img/cadernoPoesias.jpg" alt="">
                 <h1>O Site</h1>

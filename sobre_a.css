@@ -7,6 +7,9 @@
     background-image: url("img/livro.jpg");
     background-size: cover;
     border: purple solid 2px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 .box h1{
     color: yellow;

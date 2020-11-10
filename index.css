@@ -120,6 +120,22 @@ body {
     height: 90vh;
     width: 80vw;
 }
+.setaNovidade{
+    height: 20vh;
+    position: absolute;
+    left: 87%;
+    top: 7%;
+    animation: setaNovidades 2s infinite alternate ease-in-out;
+
+}
+@keyframes setaNovidades{
+    from{
+        top: 7%;
+    }
+    to{
+        top: 35%
+    }
+}
 
 .divisaUmPai {
     height: 10%;
@@ -231,6 +247,9 @@ footer {
 }
 
 @media only screen and (max-width: 900px) {
+    .setaNovidade{
+        left: 80%;
+    }
     .containerFooter{
 flex-direction: column-reverse;
     }
@@ -248,4 +267,9 @@ flex-direction: column-reverse;
         width: 100%;
         font-size: 100%;
     }
+}
+@media only screen and (max-width: 700px){
+.setaNovidade{
+    left: 75%;
+}
 }

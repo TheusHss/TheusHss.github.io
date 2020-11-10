@@ -1,7 +1,6 @@
-*{
-    
+* {
     margin: 0px;
-    cursor:default;
+    cursor: default;
 }
 
 header {
@@ -15,9 +14,9 @@ header {
 header h1 {
     letter-spacing: -4px;
     color: yellow;
-
 }
-.tempo{
+
+.tempo {
     display: flex;
     align-items: center;
     color: yellow;
@@ -28,8 +27,8 @@ header h1 {
     font-size: 1rem;
     position: fixed;
     border-bottom: yellow solid 2px;
-    background: rgb(0,0,0);
-background: linear-gradient(270deg, rgba(0,0,0,1) 0%, rgba(38,0,97,1) 54%, rgba(176,0,180,1) 100%);
+    background: rgb(0, 0, 0);
+    background: linear-gradient(270deg, rgba(0, 0, 0, 1) 0%, rgba(38, 0, 97, 1) 54%, rgba(176, 0, 180, 1) 100%);
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -85,7 +84,6 @@ background: linear-gradient(270deg, rgba(0,0,0,1) 0%, rgba(38,0,97,1) 54%, rgba(
 
 .cadLog h3 {
     color: rgb(255, 235, 205);
-
 }
 
 .btn_cadLog {
@@ -109,16 +107,23 @@ background: linear-gradient(270deg, rgba(0,0,0,1) 0%, rgba(38,0,97,1) 54%, rgba(
     cursor: pointer;
     height: 7.5vh;
     background-color: purple;
-    border: yellow solid 2px ;
+    border: yellow solid 2px;
     border-radius: 45vh;
 }
-.menuClass{
+
+.menuClass {
     animation: menuClick 1.5s;
 }
-@keyframes menuClick{
-    from{transform: rotate(0deg) ;}
-    to{transform: rotate(365deg) ;}
+
+@keyframes menuClick {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(365deg);
+    }
 }
+
 .caneta {
     height: 8vh;
     animation: caneta 1s infinite alternate;
