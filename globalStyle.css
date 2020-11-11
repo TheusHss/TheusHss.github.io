@@ -23,6 +23,7 @@ header h1 {
 }
 
 .cabecario {
+    z-index: 5;
     box-shadow: 0px 0px 12px 2px purple;
     font-size: 1rem;
     position: fixed;
@@ -54,6 +55,7 @@ header h1 {
     background-size: cover;
     transition: left 1s;
     background-color: rgba(0, 0, 0);
+    z-index: 5;
 }
 
 .boxMenu h1 {

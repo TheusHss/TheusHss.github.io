@@ -121,7 +121,7 @@ body {
     width: 80vw;
 }
 .setaNovidade{
-    height: 20vh;
+    width: 20vw;
     position: absolute;
     left: 87%;
     top: 7%;
@@ -248,7 +248,7 @@ footer {
 
 @media only screen and (max-width: 900px) {
     .setaNovidade{
-        left: 80%;
+        left: 79%;
     }
     .containerFooter{
 flex-direction: column-reverse;
