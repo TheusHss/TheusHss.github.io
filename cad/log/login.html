@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../../globalStyle.css">
+    <link rel="shortcut icon" href="../../img/dove.svg" type="image/x-icon">
+
+    <title>Login</title>
+</head>
+
+<body>
+    <header>
+        <div class="cabecario">
+            <h1 style="font-size: 4vh;">
+                Poesias
+            </h1>
+            <ul>
+                <li>
+                    <a href="../../index.html">Home</a>
+                    <a href="../cad/cadastro.html">Cadastrar</a>
+                    <a href="">Contato</a>
+                </li>
+            </ul>
+        </div>
+    </header>
+    <div class="container">
+        <div class="box">
+            <h1>Logar</h1>
+            <p>Email</p>
+            <input type="text" id="in_email" placeholder="Email">
+            <p>Senha</p>
+            <input type="text" id="in_senha" placeholder="Senha">
+            <button onclick="entrar()">Entrar</button>
+            <a href="" style="color: blue; cursor: pointer;">Esqueci a senha</a>
+        </div>
+    </div>
+
+</body>
+
+</html>
+<script>
+    function entrar(){
+        var senha=in_senha.value
+        var email=in_email.value
+        if(senha=="Matheus" && email=="Admin"){
+            window.location.href="../../index.html"
+        }else(
+            alert("Algo está errado")
+        )
+    }
+
+</script>

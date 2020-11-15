@@ -52,6 +52,14 @@ background: linear-gradient(90deg, rgba(56, 0, 62, 0.500) 0%, rgba(203,0,255,0.2
     border-left: yellow solid 2px ;
     outline: none;
     height: 4vh;
+    animation: crescerInput 4s ;
+}
+@keyframes crescerInput{
+    from{
+        /* height: 0%; */
+        font-size:0vh;
+        width: 0%;
+    }
 }
 .boxcad p{
     color: yellow;
@@ -83,4 +91,16 @@ background: linear-gradient(90deg, rgba(56, 0, 62, 0.500) 0%, rgba(203,0,255,0.2
     width: 90%;
     border-bottom: none;
 }
+}
+button{
+    background-color: black;
+    color: yellow;
+    border-radius: 4vh;
+    border: purple solid 2px;
+    transition: 1s;
+    transform: rotateZ(1440deg);
+}
+button:hover{
+    background-color: yellow;
+    color: black;
 }
