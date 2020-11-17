@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>jogo</title>
+</head>
+
+<body>
+    <div class="container">
+        <div id="bi" class="box">
+            <img src="galo.webp" id="person" alt="">
+            <div style="height: 100%; display: flex; align-items: flex-start;">
+                <h1 id="segundos" style="color: yellow;"></h1>
+                <a onclick="audFunc()">Song</a>
+                <a >|</a>
+                <a onclick="audFuncMute()">Parar</a>
+                <a >|</a>
+                <a href="../index.html" style="color: yellow;">Voltar</a>
+            </div>
+        </div>
+        <div class="btnsMov">
+    
+            <div class="verticalBtns">
+                <button onclick="cima()">>>>></button>
+                <button onclick="baixo()">>>>></button>
+            </div>
+            <div class="horizontalBtns">
+                <button onclick="esquerda()">>>>></button>
+                <button onclick="direita()">>>>></button>
+            </div>
+        </div>
+    </div>
+</body>
+<audio id="AudId" src="../audio/princess_zelda_the_legend_of_zelda_ocarina_of_time_5440122353376836432.mp3"></audio>
+</html>
+<script src="../script.js"></script>
+<script src="script.js"></script>
