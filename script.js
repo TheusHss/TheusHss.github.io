@@ -5,7 +5,6 @@ function menu() {
 
 var sumir;
 function prosseguir() {
-
     matheusIdImg.src = "img/matheusPic.png"
     
     sumir = setTimeout(sumaFunc, 500)
@@ -15,6 +14,13 @@ function prosseguir() {
         tudo.style.display = 'block'
     }
     
+}
+function audFunc(){
+    alert("Musica, Caso Não Queira, Abaixe o som Ou recarregue a Pagina ")
+    AudId.play()
+}
+function audFuncMute(){
+    AudId.pause()
 }
 var seg=00;
 var min=00;
