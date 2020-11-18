@@ -16,7 +16,7 @@ function prosseguir() {
     
 }
 function audFunc(){
-    alert("Musica, Caso Não Queira, Abaixe o som Ou recarregue a Pagina ")
+    alert('Musica, Caso Não Queira, Aperte "pare" Abaixe o som Ou recarregue a Pagina ')
     AudId.play()
 }
 function audFuncMute(){

@@ -45,14 +45,13 @@ p{
 }
 input{
     cursor: pointer;
-    align-items: center;
-    display: flex;
-    justify-content: center;
+    text-align: center;
     background-color: rgba(0, 0, 0, 0.658);
     width: 80%;
     font-size: 0.7rem;
     color: yellow;
-    border-left: yellow solid 2px ;
+    border: 0;
+    border-bottom:2px solid yellow ;
     outline: none;
     height: 4vh;
 }
@@ -67,6 +66,12 @@ button{
 button:hover{
     background-color: yellow;
     color: black;
+}
+::placeholder{
+    font-size: 0.7rem;
+    color: yellow;
+    text-align: center;
+    animation: framePlace 1s infinite;
 }
 @media only screen and (max-width: 800px) {
     .box{
