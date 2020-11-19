@@ -5,6 +5,7 @@ function menu() {
 
 var sumir;
 function prosseguir() {
+    theoAud.play()
     matheusIdImg.src = "img/matheusPic.png"
     
     sumir = setTimeout(sumaFunc, 500)
