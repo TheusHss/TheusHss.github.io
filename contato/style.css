@@ -1,0 +1,102 @@
+body{
+    background-image: url('../img/azulButterfly.webp');
+    background-attachment: fixed;
+    background-size: cover;
+}
+.container{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 100vh;
+}
+.ajuda{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 4%;
+    box-shadow: 2px 4px 5px yellow;
+
+}
+.ajuda h1{
+    color: rgb(174, 0, 255);
+    background-color: rgb(0, 0, 0);
+    text-align: center;
+    height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: rgb(118, 0, 252) solid 4px;
+}
+.box1{
+    background-color: rgb(0, 0, 0);
+    min-height: 90vh;
+    min-width: 40%;
+    box-shadow: 2px 4px 5px yellow;
+    border: yellow solid 2px;
+}
+.containerBox1{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    width: 100%;
+    height: 80vh;
+}
+.containerBox1 img{
+    height: 8vh;
+}
+.box2{
+    background-color: rgb(0, 0, 0);
+    min-height: 90vh;
+    min-width: 40%;
+    box-shadow: 2px 4px 5px yellow;
+    border: yellow solid 2px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+p b{
+    font-size: 8vh;
+    color: rgb(238, 255, 0);
+}
+p{
+    width: 100%;
+    background-color: rgb(66, 0, 128);
+    border: yellow solid 2px;
+    color: yellow;
+    font-size: 4vh;
+}
+.bubs{
+    width: 90%;
+}
+.bubsPergunta{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 10vh;
+    width: 90%;
+    background-color: rgb(0, 0, 0);
+    border-radius: 4vh 4vh 0vh 0vh;
+    border: blue solid 4px;
+}
+.bubsPergunta h1{
+    color: yellow;
+    border-bottom: yellow 2px solid;
+}
+.bubsPergunta button{
+    background-color: rgb(55, 0, 71);
+    color: rgb(255, 230, 0);
+    border: rgb(255, 230, 0) 2px solid;
+    width: 100%;
+    margin: 3px;
+    cursor:pointer ;
+}
+.bubsPergunta button:hover{
+    background-color: yellow;
+    color: black;
+}
