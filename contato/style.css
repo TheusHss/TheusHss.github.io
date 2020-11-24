@@ -88,7 +88,7 @@ p {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 10vh;
+    height: 16vh;
     width: 90%;
     background-color: rgb(0, 0, 0);
     border-radius: 4vh 4vh 0vh 0vh;
@@ -129,6 +129,7 @@ p {
 .online {
     border: white solid 2px;
     width: 94%;
+    height: 16%;
     background-color: black;
     display: flex;
     justify-content: space-between;
@@ -141,6 +142,7 @@ p {
     color: rgb(0, 255, 191);
     display: flex;
 }
+
 .menu {
     background-color: blue;
     display: flex;
@@ -168,7 +170,10 @@ p {
     min-height: 76%;
     width: 94%;
     overflow: auto;
-    background-color: rgb(255, 255, 255);
+    /* background-color: rgba(0, 0, 0, 0.644); */
+    background-image: url("../img/bolaAzulEspaço.jpg");
+    background-attachment: fixed;
+    background-size: cover;
     border: white solid 2px;
 }
 
@@ -203,59 +208,86 @@ p {
     border-right: cyan solid 2px;
     color: cyan;
 }
-.boxrepeat{
+
+.boxrepeat {
     width: 100%;
-    height: 10vh;
     display: flex;
     justify-content: flex-start;
     align-items: center;
 }
-.boxrepeat h1{
+
+.boxrepeat h1 {
+    padding: 2px;
+    background-color: rgb(255, 255, 255);
+    border: blue solid 2px;
+    border-radius: 4vh 0 4vh 0;
     font-size: 4vh;
 }
-.boxrepeatclient{
+
+.boxrepeatclient {
     width: 100%;
-    height: 10vh;
     display: flex;
     justify-content: flex-end;
     align-items: center;
 }
-.boxrepeatclient h1{
+
+.boxrepeatclient h1 {
+    padding: 2px;
+    background-color: rgb(255, 255, 255);
+    border: blue solid 2px;
+    border-radius: 4vh 0 4vh 0;
     font-size: 4vh;
 }
-.perfilDefala{
+
+.perfilDefala {
     margin: 5px;
     width: 8vh;
-height: 8vh;
-border-radius: 8vh;
-background-color: rgb(1, 17, 110);
-display: flex;
-justify-content: center;
-align-items: center;
+    height: 8vh;
+    border-radius: 8vh;
+    background-color: rgb(1, 17, 110);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-.perfilDefala img{
+
+.perfilDefalaClient {
+    margin: 5px;
+    width: 8vh;
+    height: 8vh;
+    border-radius: 8vh;
+    background-color: rgb(0, 204, 255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.perfilDefala img, .perfilDefalaClient img {
     height: 8vh;
 }
+.ani {
+    animation: n 0.3s infinite;
+}
+
+@keyframes n {
+    0% {
+        transform: rotate(7000deg)
+    }
+}
+
 @media only screen and (max-width: 1050px) {
-    .boxConversa{
+    .boxConversa {
         width: 60vw;
     }
 }
+
 @media only screen and (max-width: 850px) {
-    .boxConversa{
+    .boxConversa {
         width: 75vw;
     }
 }
+
 @media only screen and (max-width: 600px) {
-    .boxConversa{
+    .boxConversa {
         width: 90vw;
-    }
-}
-.ani{
-    animation: n 0.3s infinite;
-}
-@keyframes n{
-    0%{
-        transform: rotate(7000deg)
     }
 }
