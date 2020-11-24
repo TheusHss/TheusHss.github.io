@@ -46,7 +46,7 @@
 
 </html>
 <script>
-    function irCadastro(){
+    function irCadastro(){      
         var formulario = new URLSearchParams(new FormData(formfromcadastro));
         fetch("/usuarios/cadastrar", {
             method: "POST",
