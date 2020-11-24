@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="./globalStyle.css">
+    <link rel="shortcut icon" href="img/dove.svg" type="image/x-icon">
+    <title>Theosia</title>
+</head>
+
+<body id="body">
+    <div id="bv" class="bemVindo">
+        <div class="matheus">
+            <h1>Bem Vindo ao Theosia</h1>
+            <img class="dove" src="img/dove.svg" alt="">
+        </div>
+        <div class="containerVindo">
+
+            <div class="box">
+                <h1 class="title"> Theosia Um Site Para Todos</h1>
+                <h2>
+                    Theosia é um site de poesias
+                    gratuito para ler, todas poesias
+                    foram criadas por Matheus Henrique,
+                    Que escreve apenas por prazer.
+                    <h1>Espero que goste!</h1>
+                </h2>
+            </div>
+            <img id="matheusIdImg" class="matheusImg" src="img/matheus.png" alt="">
+            <button onclick="prosseguir()" class="btn">Prosseguir</button>
+        </div>
+    </div>
+
+    <div style="display: none;" id="tudo">
+        <header>
+            <div class="cabecario">
+                <img onclick="menu()" class="menuc" id="menuId" src="img/lista.svg" alt="">
+                <h1>
+                    Poesias
+                </h1>
+                <ul>
+                    <li>
+                        <a href="index.html">Home</a>
+                        <a href="cad/log/login.html">Login</a>
+                        <a href="./contato/contato.html">Contato</a>
+                        <a >|</a>
+                        <a onclick="audFunc()">Song</a>
+                        <a onclick="audFuncMute()">Parar</a>
+                    </li>
+                </ul>
+                <div class="tempo">
+                    <p id="horas">00</p>:
+                    <p id="minutos">00</p>:
+                    <p id="segundos">00</p>
+                </div>
+            </div>
+        </header>
+        <div id="boxMenuId" class="boxMenu">
+            <div class="cadLog">
+                <h3>
+                    Olá, gostaria de saber mais?
+                </h3> 
+                <div>
+                    <button class="btn_cadLog" onclick="cadastro()">Cadastrar</button>
+                    <button class="btn_cadLog">Entrar</button>
+                </div>
+            </div>
+            v3.2
+            <h1 onclick="todasPoesias()">Todas Poesias</h1> <br>
+            <h1 onclick="ss()">Sobre o site</h1> <br>
+            <h1 onclick="sa()">Sobre o Autor</h1>
+        </div>
+        <div class="paiNovidades">
+            <div class="novidades">
+                <img src="img/seta.png" class="setaNovidade" alt="">
+                <img class="novidadeImg" src="img/amcond.jpg" alt="">
+
+            </div>
+        </div>
+
+        <div class="divisaUmPai">
+
+            <div class="divisaUm">
+                <h1>Favoritas</h1>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="boxPrimeira">
+                <h1 class="title"> Olhar de cima </h1>
+                <h2>Todos me escutaram, <br>
+                    Mas ninguém me ouviu, <br>
+                    Foram no caminho errado, <br>
+                    E o mal os consumio
+                    <a href="./poesias/Todas.html">Ver</a>
+                </h2>
+            </div>
+
+            <div class="boxPrimeira">
+                <h1 class="title">Flor Arrancada</h1>
+                <h2>
+                    A vida vem da terra, <br>
+                    a planta cresce nela, <br>
+                    o mundo precisa dela, <br>
+                    o oxigenio é com ela
+                    <a href="./poesias/Todas.html">Ver</a>
+                </h2>
+            </div>
+            <div class="boxPrimeira">
+                <h1 class="title"> A procura </h1>
+                <h2>
+                    Viverei lutando, <br>
+                    Morrerei em paz, <br>
+                    sonharei realizando <br>
+                    E serei audaz
+                    <a href="./poesias/Todas.html#Aprocura">Ver</a>
+                </h2>
+            </div>
+            <div class="boxPrimeira">
+                <h1 class="title"> Mulher impaciente </h1>
+                <h2>
+                    Ansciosa com o tempo,<br>
+                    Perigosa como o vento,<br>
+                    ímpia a realidade, <br>
+                    criadora de crueldade
+                    <a href="./poesias/Todas.html">Ver</a>
+                </h2>
+            </div>
+            <div class="boxPrimeira">
+                <h1 class="title"> Lagrimas de fogo </h1>
+                <h2>
+                    A chama arde pra pedir, <br>
+                    Meu coração grita por ti, <br>
+                    Sinto que vou explodir, <br>
+                    Só a desejava e deixei ir <br>
+                    <a href="./poesias/Todas.html">Ver</a>
+                </h2>
+            </div>
+            <div class="boxPrimeira">
+                <h1 class="title"> Explorador </h1>
+                <h2>
+                    Escutar para conhecer, <br>
+                    Não crescer sem explorar, <br>
+                    para ver e viver, <br>
+                    e a vida desfrutar
+                    <a href="./poesias/Todas.html">Ver</a>
+                </h2>
+            </div>
+
+        </div>
+
+        <footer>
+            <div class="containerFooter">
+                <img class="caneta" src="img/caneta.png" alt="">
+                <div class="boxFooter">
+                    <h1>Sobre</h1>
+                    <p onclick="ss()">♦ O Site</p>
+                    <p onclick="sa()">♦ O Autor</p>
+                    
+                </div>
+                <div class="boxFooter">
+                    <h1>Contato</h1>
+                   <p>matheus.h.s.s100@gmail.com </p> 
+                    <a href="https://api.whatsapp.com/send?phone=5511991319248"> <p style="color: white;">+55 11 99131-9248</p></a>
+                </div>
+                
+
+                <div class="boxFooter">
+                   <h1> Siga-me</h1>
+                    <img onclick="face()" src="img/icon/facebook.svg" alt="">
+                    facebook
+                    <img onclick="insta()" src="img/icon/instagram.svg" alt="">
+                    instagram
+                    <img onclick="git()"src="img/icon/github.svg" alt="">
+                    github
+                </div>
+
+                <img class="euFooter" src="img/matheus.png" alt="">
+            </div>
+        </footer>
+    </div>
+    <audio id="theoAud" src="./audio/theosia.aac"></audio>
+    <audio id="AudId" src="./audio/lost_woods_the_legend_of_zelda_ocarina_of_time_5379774521904435254.mp3"></audio>
+</body>
+
+</html>
+<script src="script.js"></script>

@@ -1,0 +1,42 @@
+body{
+    background-image: url('../img/livro.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+}
+.container{
+    flex-wrap: wrap;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.boxPoesia{
+box-shadow: 0px 0px 12px 2px purple;
+    margin: 2%;
+    width: 30%;
+    background-color: rgba(0, 0, 0, 0.658);
+    border: blanchedalmond solid 2px;
+    border-radius:4vh ;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.boxPoesia p{
+    color: yellow;
+    font-size: 4vh;
+}
+.boxPoesia h1{
+    color: blanchedalmond;
+
+    text-align: center;
+}
+@media only screen and (max-width: 950px){
+    .boxPoesia{
+        width: 60%;
+    }
+}
+@media only screen and (max-width: 700px){
+    .boxPoesia{
+        font-size: 1.8vh;
+        width: 80%;
+    }
+}

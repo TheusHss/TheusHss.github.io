@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../globalStyle.css">
+    <link rel="shortcut icon" href="../../img/dove.svg" type="image/x-icon">
+    <link rel="stylesheet" href="stylecad.css">
+    <title>Theosia</title>
+</head>
+
+<body>
+    <div id="tudo">
+        <header>
+            <div class="cabecario">
+
+                <h1>
+                    Poesias
+                </h1>
+                <ul>
+                    <li>
+                        <a href="../../index.html">Home</a>
+                        <a href="../log/login.html">Login</a>
+                    </li>
+                </ul>
+        </header>
+        <div class="container">
+            <form id="formfromcadastro" method="POST" onsubmit="return irCadastro()" class="boxcad">
+                <div class="separar">
+                    <p>Nome</p>
+                    <input name="nome" type="text" placeholder="Ex:Matheus">
+                    <p>E-mail</p>
+                    <input name="email" type="text" placeholder="Ex:matheus.h.s.s100@gmail.com">
+                </div>
+                <div class="separar">
+                    <p>Senha</p>
+                    <input name="senha" type="text" placeholder="Ex:123456">
+                    <p>Confirme a senha</p>
+                    <input type="text" placeholder="Ex:123456">
+                    <button type="submit">Prosseguir</button>
+                </div>
+            </form>
+        </div>
+</body>
+
+</html>
+<script>
+    function irCadastro(){
+        var formulario = new URLSearchParams(new FormData(formfromcadastro));
+        fetch("/usuarios/cadastrar", {
+            method: "POST",
+            body: formulario
+        }).then(function (response) {
+            
+            if (response.ok) {
+                window.location.reload();
+            } else {
+
+                console.log('Erro de cadastro!');
+                response.text().then(function (resposta) {
+                    alert(resposta)
+                });
+            }
+        });
+
+        return false;
+
+    }
+</script>

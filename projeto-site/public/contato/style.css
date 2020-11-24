@@ -1,0 +1,297 @@
+body {
+    background-image: url('../img/azulButterfly.webp');
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 100vh;
+}
+
+.ajuda {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 4%;
+    box-shadow: 2px 4px 5px yellow;
+}
+
+.ajuda h1 {
+    color: rgb(174, 0, 255);
+    background-color: rgb(0, 0, 0);
+    text-align: center;
+    height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: rgb(118, 0, 252) solid 4px;
+}
+
+.box1 {
+    background-color: rgb(0, 0, 0);
+    min-height: 90vh;
+    min-width: 40%;
+    box-shadow: 2px 4px 5px yellow;
+    border: yellow solid 2px;
+}
+
+.containerBox1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    width: 100%;
+    height: 80vh;
+}
+
+.containerBox1 img {
+    height: 8vh;
+}
+
+.box2 {
+    background-color: rgb(0, 0, 0);
+    min-height: 90vh;
+    min-width: 40%;
+    box-shadow: 2px 4px 5px yellow;
+    border: yellow solid 2px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+p b {
+    font-size: 8vh;
+    color: rgb(238, 255, 0);
+}
+
+p {
+    width: 100%;
+    background-color: rgb(66, 0, 128);
+    border: yellow solid 2px;
+    color: yellow;
+    font-size: 4vh;
+}
+
+.bubs {
+    width: 90%;
+}
+
+.bubsPergunta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 16vh;
+    width: 90%;
+    background-color: rgb(0, 0, 0);
+    border-radius: 4vh 4vh 0vh 0vh;
+    border: blue solid 4px;
+}
+
+.bubsPergunta h1 {
+    color: yellow;
+    border-bottom: yellow 2px solid;
+}
+
+.bubsPergunta button {
+    background-color: rgb(55, 0, 71);
+    color: rgb(255, 230, 0);
+    border: rgb(255, 230, 0) 2px solid;
+    width: 100%;
+    margin: 3px;
+    cursor: pointer;
+}
+
+.bubsPergunta button:hover {
+    background-color: yellow;
+    color: black;
+}
+
+/* __________ BUBBLE */
+
+.boxConversa {
+    height: 98%;
+    width: 40vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(8, 0, 54);
+    border: black solid 2px;
+}
+
+.online {
+    border: white solid 2px;
+    width: 94%;
+    height: 16%;
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+
+.online h1 {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: rgb(0, 255, 191);
+    display: flex;
+}
+
+.menu {
+    background-color: blue;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.menu b {
+    font-size: 4vh;
+    color: white;
+}
+
+.imgPerfil {
+    width: 12vh;
+    height: 12vh;
+    background-image: url("./imgBubble/bubbleCfundo.png");
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10vh;
+}
+
+.conversas {
+    min-height: 76%;
+    width: 94%;
+    overflow: auto;
+    /* background-color: rgba(0, 0, 0, 0.644); */
+    background-image: url("../img/bolaAzulEspaço.jpg");
+    background-attachment: fixed;
+    background-size: cover;
+    border: white solid 2px;
+}
+
+.inpEnviar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 8vh;
+    width: 94%;
+    border: white solid 2px;
+    background-color: black;
+}
+
+.inpEnviar input {
+    text-align: center;
+    outline: none;
+    background-color: blue;
+    color: cyan;
+    border: black 2px solid;
+    width: 80%;
+}
+
+.inpEnviar input::placeholder {
+    color: cyan;
+}
+
+.inpEnviar button {
+    outline: none;
+    width: 20%;
+    background-color: black;
+    border-radius: 0vh 10vh 10vh 0vh;
+    border-right: cyan solid 2px;
+    color: cyan;
+}
+
+.boxrepeat {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.boxrepeat h1 {
+    padding: 2px;
+    background-color: rgb(255, 255, 255);
+    border: blue solid 2px;
+    border-radius: 4vh 0 4vh 0;
+    font-size: 4vh;
+}
+
+.boxrepeatclient {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.boxrepeatclient h1 {
+    padding: 2px;
+    background-color: rgb(255, 255, 255);
+    border: blue solid 2px;
+    border-radius: 4vh 0 4vh 0;
+    font-size: 4vh;
+}
+
+.perfilDefala {
+    margin: 5px;
+    width: 8vh;
+    height: 8vh;
+    border-radius: 8vh;
+    background-color: rgb(1, 17, 110);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.perfilDefalaClient {
+    margin: 5px;
+    width: 8vh;
+    height: 8vh;
+    border-radius: 8vh;
+    background-color: rgb(0, 204, 255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.perfilDefala img, .perfilDefalaClient img {
+    height: 8vh;
+}
+.ani {
+    animation: n 0.3s infinite;
+}
+#boxInpMatematica input{
+width: 2vw;
+margin-right: 4%;
+}
+
+@keyframes n {
+    0% {
+        transform: rotate(7000deg)
+    }
+}
+
+@media only screen and (max-width: 1050px) {
+    .boxConversa {
+        width: 60vw;
+    }
+}
+
+@media only screen and (max-width: 850px) {
+    .boxConversa {
+        width: 75vw;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .boxConversa {
+        width: 90vw;
+    }
+}

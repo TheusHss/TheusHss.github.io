@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../globalStyle.css">
+    <link rel="shortcut icon" href="../img/dove.svg" type="image/x-icon">
+    <title>BUBBLE</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="boxConversa">
+            <div class="online">
+                <div class="imgPerfil"></div>
+                <h1>ONLINE</h1>
+                <div class="menu">. <br> . <br> .</div>
+            </div>
+            <div class="conversas" id="conversasId">
+                <div class="boxrepeat">
+                    <div class="perfilDefala"><img src="./imgBubble/bubblerosto.png" alt=""></div>
+                    <h1 id="fraseId">Olá Meu Nome é bubble, O que gostaria de saber? <br>
+                        1= sobre o site? <br>
+                        2= sobre o autor? <br>
+                        3= jogos?<br>
+                        4= mais <br>
+                        0= voltar</h1>
+                </div>
+
+            </div>
+            <div class="inpEnviar">
+                <input  placeholder="Digite Aqui" type="text" id="fraseInp">
+                <button onclick="enviar()">→</button>
+            </div>
+        </div>
+    </div>
+
+    </div>
+
+</body>
+
+</html>
+<script>
+    var cont = 0;
+    function enviar() {
+        var frase = fraseInp.value
+        var fraseMatematica = Number(fraseInp.value)
+        if (frase == "") { return }
+        var fraseMin = frase.toLowerCase()
+        var xLetras = frase.length;
+
+        cont++
+
+        /* Box cliente */
+        conversasId.innerHTML += `
+        <div class="boxrepeatclient">
+        <h1>${frase}</h1>
+        <div class="perfilDefalaClient"><img src="../img/icon/User.png" alt=""></div>
+        </div>`;
+        fraseInp.value = ""
+
+        /* Box bot */
+        conversasId.innerHTML += `   
+        <div class="boxrepeat">
+        <div class="perfilDefala"><img src="./imgBubble/bubblerosto.png" alt=""></div>
+        <h1 class="ani${cont} ani">::</h1>
+        </div>`
+
+        setTimeout(() => {
+            if (fraseMin == "matheus é lindo?") {
+                document.querySelector(`.ani${cont}`).innerHTML = `SIM!`
+                document.querySelector(`.ani${cont}`).style.animation = "none"
+            } else if (fraseMin == "voltar" || frase == "0") {
+                document.querySelector(`.ani${cont}`).innerHTML = `<a href="../index.html">Aqui</a>`
+                document.querySelector(`.ani${cont}`).style.animation = "none"
+            } else if (fraseMin == "sobre o site" || frase == "1") {
+                document.querySelector(`.ani${cont}`).innerHTML = `<a href="../sobre_s.html">Aqui</a>`
+                document.querySelector(`.ani${cont}`).style.animation = "none"
+            } else if (fraseMin == "sobre o autor" || frase == "2") {
+                document.querySelector(`.ani${cont}`).innerHTML = `<a href="../sobre_a.html">Aqui</a>`
+                document.querySelector(`.ani${cont}`).style.animation = "none"
+            } else if (fraseMin == "jogos" || frase == "3") {
+                document.querySelector(`.ani${cont}`).innerHTML = `20= Matematica<br>
+                21=`
+                document.querySelector(`.ani${cont}`).style.animation = "none"
+            } else if (fraseMin == "matematica" || frase == "20") {
+                document.querySelector(`.ani${cont}`).innerHTML = `    calculo
+                <div id="boxInpMatematica">
+                Numero 1
+                <input id="n1" type="text">
+                Operação
+                <input id="esc" type="text">
+                Numero 2
+                <input onkeyup="mat()" id="n2" type="text"> <br>
+                Resultado
+                <div id="result"></div>`
+                document.querySelector(`.ani${cont}`).style.animation = "none"
+            }
+            else if (fraseMin == "mais" || frase == "4") {
+                document.querySelector(`.ani${cont}`).innerHTML = `
+                cadastro:<a href="../cad/cad/cadastro.html">Aqui</a>
+                <br><br>
+                qual o nome do song? <br>
+                <i>The Legend of Zelda: Ocarina of Time Master Quest</i> <br><br>
+                <a href="https://api.whatsapp.com/send?phone=5511991319248">Conversar com o autor</a>`
+                document.querySelector(`.ani${cont}`).style.animation = "none"
+            } else {
+                if (fraseMatematica) {
+                    document.querySelector(`.ani${cont}`).innerHTML = `${fraseMatematica}?`
+                    document.querySelector(`.ani${cont}`).style.animation = "none"
+
+                } else {
+                    document.querySelector(`.ani${cont}`).innerHTML = `<i style="color:red;">${fraseMin}</i> tem ${xLetras} caracteres mas não identifico uma pergunta valida...`
+                    document.querySelector(`.ani${cont}`).style.animation = "none"
+                }
+            }
+        }, 800);
+
+    }
+    function mat() {
+        var num1 = Number(n1.value)
+        var opera = esc.value
+        var num2 = Number(n2.value)
+
+        result.innerHTML = `${(num1)(opera)(num2)}`
+    }
+</script>

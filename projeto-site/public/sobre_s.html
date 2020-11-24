@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="globalStyle.css">
+    <link rel="stylesheet" href="sobre_a.css">
+    <link rel="shortcut icon" href="./img/dove.svg" type="image/x-icon">
+    <title>Site</title>
+</head>
+
+<body>
+    <header>
+        <div class="cabecario">
+            <img onclick="menu()" class="menuc" id="menuId" src="./img/lista.svg" alt="">
+            <h1>
+                Poesias
+            </h1>
+            <ul>
+                <li>
+                    <a href="index.html">Home</a>
+                    <a href="./cad/log/login.html">Login</a>
+                    <a href="./contato/contato.html">Contato</a>
+                </li>
+            </ul>
+            <div class="tempo">
+                <p id="horas">00</p>:
+                <p id="minutos">00</p>:
+                <p id="segundos">00</p>
+            </div>
+        </div>
+    </header>
+    <div id="boxMenuId" class="boxMenu">
+        <div class="cadLog">
+            <h3>
+                Olá, gostaria de saber mais?
+            </h3>
+            <div>
+                <button class="btn_cadLog" onclick="cadastro()">Cadastrar</button>
+                <button class="btn_cadLog">Entrar</button>
+            </div>
+        </div>
+      <h1 onclick="todasPoesias()">Todas Poesias</h1> <br>
+        <h1 onclick="ss()">Sobre o site</h1> <br>
+        <h1 onclick="sa()">Sobre o Autor</h1>
+    </div>
+    <div class="container">
+        <div class="box" style="height: 100vh;">
+            <div class="box_in_box">
+                <img src="img/cadernoPoesias.jpg" alt="">
+                <h1>O Site</h1>
+            </div>
+            <p>
+                Este Site foi criado com base no livro chamado de "conhecimento" feito por Matheus Henrique. Em 2013
+                Matheus Começou a escrever poesias de seu cotidiano e de sentimentos vividos, mas apenas alguns anos
+                depois
+                que pensou em criar um caderno de suas poesias, dada essas escritas foi possivel realizar este web site.
+                seu ponto de partida começava com a primeira letra de seu caderno, mas seu direcionamento para estar
+                aqui,
+                só foi possivel quando entrou na faculdade, onde ocorreu um trabalho em que o autor deveria expressar
+                suas caracteristicas em um site.
+            </p>
+            <p class="p2">
+                "Apenas palavras não podem salvar o mundo, mas em cada, algo motivacional está dito, e com isso só é preciso atitude para realizar sonhos."   
+                <i style="color: yellow;">Matheus Henrique</i>
+            </p>
+            <p>
+                Espero que goste!
+            </p>
+        </div>
+    </div>
+
+</body>
+
+</html>
+<script src="script.js"></script>
