@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../globalStyle.css">
+    <link rel="shortcut icon" href="../img/dove.svg" type="image/x-icon">
+    <title>BUBBLE</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="boxConversa">
+            <div class="online">
+                <div class="imgPerfil"></div>
+                <h1>ONLINE</h1>
+                <div class="menu" id="xLetras"></div>
+            </div>
+            <div class="conversas" id="conversasId">
+                <div class="boxrepeat">
+                    <div class="perfilDefala"><img src="./imgBubble/bubblerosto.png" alt=""></div>
+                    <h1 id="fraseId">Olá Meu Nome é bubble, O que gostaria de saber? </h1>
+                </div>
+
+            </div>
+            <div class="inpEnviar">
+                <input onchange="enviar()" placeholder="Digite Aqui" type="text" id="fraseInp">
+                <button onclick="enviar()">→</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+<script>
+    var cont = 0;
+    function enviar() {
+        var frase = fraseInp.value
+        var fraseMin = frase.toUpperCase()
+        var xLetras=frase.length;
+
+        cont++
+
+        /* Box cliente */
+        conversasId.innerHTML += `
+        <div class="boxrepeatclient">
+        <h1>${frase}</h1>
+        <div class="perfilDefala"><img src="../img/icon/User.png" alt=""></div>
+        </div>`;
+        fraseInp.value = ""
+
+        /* Box bot */
+        conversasId.innerHTML += `   
+        <div class="boxrepeat">
+        <div class="perfilDefala"><img src="./imgBubble/bubblerosto.png" alt=""></div>
+        <h1 class="ani${cont} ani">::</h1>
+        </div>`
+
+        setTimeout(() => {
+            document.querySelector(`.ani${cont}`).innerHTML = `${fraseMin} tem ${xLetras} caracteres`
+            document.querySelector(`.ani${cont}`).style.animation = "none"
+        }, 1500);
+
+    }
+</script>

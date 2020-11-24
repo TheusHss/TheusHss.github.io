@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="../globalStyle.css">
+    <link rel="shortcut icon" href="../img/dove.svg" type="image/x-icon">
     <title>Contato</title>
 </head>
 
@@ -54,10 +55,10 @@
         </div>
 
         <div class="box2">
-            <img class="bubs" src="./imgBubble/bubble.svg" alt="">
+            <img class="bubs" src="./imgBubble/bubbleCfundo.png" alt="">
             <div class="bubsPergunta">
                 <h1>Ajuda com o Bubble?</h1>
-                <button>BUBBLE</button>
+                <button onclick="bubbleButton()">BUBBLE</button>
 
             </div>
         </div>
@@ -67,4 +68,9 @@
 </body>
 
 </html>
+<script>
+    function bubbleButton(){
+        window.location.href="./bubble.html"
+    }
+</script>
 <script src="../script.js"></script>
