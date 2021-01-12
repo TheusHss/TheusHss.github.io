@@ -43,11 +43,20 @@
 
 </html>
 <script>
+function verifico(){
+    var nomeSession = sessionStorage.getItem('nomeUserSession')
+    if (nomeSession == null) {
+        window.location.href="./contato.html"
+    } else {
+        alert(`Bem Vindo ${nomeSession}`)
+    }
+}
+window.onload=verifico
     var cont = 0;
     function enviar() {
         var frase = fraseInp.value
         var fraseMatematica = Number(fraseInp.value)
-        if (frase == "") { return }
+        if (frase == "") { break }
         var fraseMin = frase.toLowerCase()
         var xLetras = frase.length;
 
@@ -82,20 +91,10 @@
                 document.querySelector(`.ani${cont}`).innerHTML = `<a href="../sobre_a.html">Aqui</a>`
                 document.querySelector(`.ani${cont}`).style.animation = "none"
             } else if (fraseMin == "jogos" || frase == "3") {
-                document.querySelector(`.ani${cont}`).innerHTML = `20= Matematica<br>
-                21=`
+                document.querySelector(`.ani${cont}`).innerHTML = `20= Curiosidades<br>`
                 document.querySelector(`.ani${cont}`).style.animation = "none"
-            } else if (fraseMin == "matematica" || frase == "20") {
-                document.querySelector(`.ani${cont}`).innerHTML = `    calculo
-                <div id="boxInpMatematica">
-                Numero 1
-                <input id="n1" type="text">
-                Operação
-                <input id="esc" type="text">
-                Numero 2
-                <input onkeyup="mat()" id="n2" type="text"> <br>
-                Resultado
-                <div id="result"></div>`
+            } else if (fraseMin == "curiosidades" || frase == "20") {
+                ascenderCuriosidade()
                 document.querySelector(`.ani${cont}`).style.animation = "none"
             }
             else if (fraseMin == "mais" || frase == "4") {
@@ -119,11 +118,22 @@
         }, 800);
 
     }
-    function mat() {
-        var num1 = Number(n1.value)
-        var opera = esc.value
-        var num2 = Number(n2.value)
+    function ascenderCuriosidade() {
+        var numAleatorio=Math.floor(Math.random() * (30 - 1 + 1)) + 1;
+        if(numAleatorio<=5){
+            document.querySelector(`.ani${cont}`).innerHTML = `<div id="boxInpMatematica">Matheus é apaixonado por programação</div>`
+        }else if(numAleatorio<=10){
+            document.querySelector(`.ani${cont}`).innerHTML = `<div id="boxInpMatematica">Matheus aprendeu a ler com quase 5 anos</div>`
+        }else if(numAleatorio<=15){
+            document.querySelector(`.ani${cont}`).innerHTML = `<div id="boxInpMatematica">Matheus ja queimou 2 computadores em 1 dia</div>`
+        }else if(numAleatorio<=20){
+            document.querySelector(`.ani${cont}`).innerHTML = `<div id="boxInpMatematica">Matheus ganhou a primeira partida de xadrez com 16 anos, e perdeu logo em seguida pra mesma pessoa</div>`
 
-        result.innerHTML = `${(num1)(opera)(num2)}`
+        }else if(numAleatorio<=25){
+            document.querySelector(`.ani${cont}`).innerHTML = `<div id="boxInpMatematica">A primeira poesia de matheus fez a professora lacrimejar</div>`
+        }else if(numAleatorio<=30){
+            document.querySelector(`.ani${cont}`).innerHTML = `<div id="boxInpMatematica">Matheus sonha em ser astronomo</div>`
+        }
+        
     }
 </script>

@@ -31,13 +31,13 @@
                     <p>Nome</p>
                     <input name="nome" type="text" placeholder="Ex:Matheus">
                     <p>E-mail</p>
-                    <input name="email" type="text" placeholder="Ex:matheus.h.s.s100@gmail.com">
+                    <input name="email" id="in_email" type="text" placeholder="Ex:matheus.h.s.s100@gmail.com">
                 </div>
                 <div class="separar">
                     <p>Senha</p>
-                    <input name="senha" type="text" placeholder="Ex:123456">
+                    <input id="in_senha" name="senha" type="text" placeholder="Ex:123456">
                     <p>Confirme a senha</p>
-                    <input type="text" placeholder="Ex:123456">
+                    <input id="in_comSenha" type="text" placeholder="Ex:123456">
                     <button type="submit">Prosseguir</button>
                 </div>
             </form>
@@ -46,7 +46,16 @@
 
 </html>
 <script>
-    function irCadastro(){      
+    function irCadastro(){  
+        var letras = in_senha.value.length;
+        if (in_senha.value == "" || in_email.value == "") {
+            alert("campos não completados")
+        } else if (letras < 6) {
+            alert(`Senha apenas com ${letras} caracteres, deve ter no minimo 6`)
+        }else if(in_senha.value != in_comSenha.value){
+            alert("Senhas Não se Igualam")
+        }
+        else {    
         var formulario = new URLSearchParams(new FormData(formfromcadastro));
         fetch("/usuarios/cadastrar", {
             method: "POST",
@@ -54,16 +63,17 @@
         }).then(function (response) {
             
             if (response.ok) {
-                window.location.reload();
+                window.location.href="../log/login.html";
             } else {
 
                 console.log('Erro de cadastro!');
+                alert("Cadastro não Realizado")
                 response.text().then(function (resposta) {
-                    alert(resposta)
+                    console.log(resposta)
                 });
             }
         });
-
+    }
         return false;
 
     }

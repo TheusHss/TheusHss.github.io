@@ -63,14 +63,18 @@
             </div>
         </div>
 
-
-
 </body>
 
 </html>
 <script>
     function bubbleButton(){
+        var nomeSession = sessionStorage.getItem('nomeUserSession')
+    if (nomeSession == null) {
+        alert("Não logado")
+        window.location.href="../cad/log/login.html"
+    } else {
         window.location.href="./bubble.html"
+    }
     }
 </script>
 <script src="../script.js"></script>

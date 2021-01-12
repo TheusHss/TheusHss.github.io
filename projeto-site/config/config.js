@@ -1,7 +1,7 @@
 module.exports = {
   production: {
     username: 'matheus',
-    password: '@H',
+    password: '@Henrique1010',
     database: 'projeto_individual_theosia',
     host: 'theosia.database.windows.net',
     dialect: 'mssql',

@@ -27,29 +27,59 @@
         </div>
     </header>
     <div class="container">
-        <div class="box">
+        <form id="formfromlogin" method="POST" onsubmit="return entrar()" class="box">
             <h1>Logar</h1>
             <p>Email</p>
-            <input type="text" id="in_email" placeholder="Email">
+            <input type="text" id="in_email" name="email" placeholder="Email">
             <p>Senha</p>
-            <input type="text" id="in_senha" placeholder="Senha">
-            <button onclick="entrar()">Entrar</button>
+            <input type="text" id="in_senha" name="senha" placeholder="Senha" type="password">
+            <button type="submit">Entrar</button>
             <a href="" style="color: blue; cursor: pointer;">Esqueci a senha</a>
-        </div>
+            
+        </form>
+        <img style="display: none;" id="doveEspera" src="../../img/dove.svg" alt="">
     </div>
 
 </body>
 
 </html>
 <script>
-    function entrar(){
-        var senha=in_senha.value
-        var email=in_email.value
-        if(senha=="Matheus" && email=="Admin"){
-            window.location.href="../../index.html"
-        }else(
-            alert("Algo está errado")
-        )
+    function entrar() {
+        var letras = in_senha.value.length;
+        if (in_senha.value == "" || in_email.value == "") {
+            alert("campos não completados")
+        } else if (letras < 6) {
+            alert(`Senha apenas com ${letras} caracteres, deve ter no minimo 6`)
+        }
+        else {
+            var formulario = new URLSearchParams(new FormData(formfromlogin));
+            fetch("/usuarios/autenticar", {
+                method: "POST",
+                body: formulario
+            }).then(resposta => {
+                doveEspera.style.display="block"
+                if (resposta.ok) {
+
+                    resposta.json().then(json => {
+
+                        sessionStorage.emailUserSession = json.email;
+                        sessionStorage.nomeUserSession = json.nome;
+                        window.location.href = "../../index.html";
+                    });
+
+                } else {
+                    doveEspera.style.display="none"
+                    alert("Erro de login")
+                    console.log('Erro de login!');
+                    resposta.text().then(texto => {
+                        console.error(texto);
+                        finalizar_aguardar(texto);
+                    });
+                }
+            });
+
+        }
+        return false;
     }
 
 </script>

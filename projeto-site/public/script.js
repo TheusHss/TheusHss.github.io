@@ -5,7 +5,6 @@ function menu() {
 
 var sumir;
 function prosseguir() {
-    theoAud.play()
     matheusIdImg.src = "img/matheusPic.png"
     
     sumir = setTimeout(sumaFunc, 500)
@@ -41,10 +40,30 @@ function paiHr(){
     horas.innerHTML=`${hou}`
   setTimeout(paiHr,1000)
 }
-window.onload=paiHr
+function session() {
+    paiHr()
+    // var emailSession = sessionStorage.getItem('emailUserSession')
+    var nomeSession = sessionStorage.getItem('nomeUserSession')
+    if (nomeSession == null) {
+        respostaDelog.innerHTML += `Ainda não logado`
+    } else {
+        respostaDelog.innerHTML += `Bem Vindo ${nomeSession}`
+    }
+}
+window.onload=session
+function verifico(){
+    var nomeSession = sessionStorage.getItem('nomeUserSession')
+    if (nomeSession == null) {
+        alert("Não Logado")
+        return
+    } else {
+        alert(`Bem Vindo ${nomeSession}`)
+        window.location.href="poesias/Todas.html"
+    }
+}
 function todasPoesias(){
-
-    window.location.href="poesias/Todas.html"
+  verifico()
+    
 }
 function face(){
     window.location.href="https://www.facebook.com/matheus.tophenrique.3/"
