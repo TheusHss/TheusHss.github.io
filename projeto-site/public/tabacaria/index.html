@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Tabacaria</title>
+</head>
+
+<body onmousedown="return false">
+    <header>
+        <div class="HeaderContainer">
+            <h1 class="nome">
+                <img src="./src/narguile_dourado.jpg" alt="">
+                Allahub hookah
+            </h1>
+            <ul>
+                <li>Ajuda</li>
+            </ul>
+            <div class="btn_menu" onclick="chamar_menu()">
+                <img src="./src/narguile_dourado.jpg" alt="">
+                menu
+            </div>
+
+        </div>
+    </header>
+    <div class="container">
+        <div id="boxMenuId" class="boxMenu">
+            <h3 onclick="narguiles_func()">Narguiles</h3>
+            <h3 onclick="carvao_func()">Carvão</h3>
+            <h3 onclick="essencias_func()">Essências</h3>
+            <h3 onclick="contato_func()">Contato</h3>
+            <img src="./src/arabe.png" alt="">
+        </div>
+        <div class="line_divisor_1">EXCLUSIVO</div>
+        <div class="container_nargas" onclick="exclusivo()">
+            <div class="nome_nargas">EM BREVE</div>
+            <img src="./src/narguile_dourado.jpg" alt="">
+            <div class="preco_nargas">R$0,00</div>
+        </div>
+        <div id="carregar" style="display: none;" class="loading">
+            <img src="./src/narguile_dourado.jpg" alt="">
+        </div>
+    </div>
+    <div class="container_dois">
+        <div id="narguiles" class="line_divisor">~~Narguiles~~</div>
+
+        <div class="box">
+            <div class="boxImg">
+                <img src="./src/narguile_dourado.jpg" alt="">
+            </div>
+            <div class="boxImg">
+                <img src="./src/narguile_dourado.jpg" alt="">
+            </div>
+            <div class="boxImg">
+                <img src="./src/narguile_dourado.jpg" alt="">
+            </div>
+            <div class="boxImg">
+                <img src="./src/narguile_dourado.jpg" alt="">
+            </div>
+            <div class="boxImg">
+                <img src="./src/narguile_dourado.jpg" alt="">
+            </div>
+            <div class="boxImg">
+                <img src="./src/narguile_dourado.jpg" alt="">
+            </div>
+            <div class="boxImg">
+                <img src="./src/narguile_dourado.jpg" alt="">
+            </div>
+        </div>
+        <div id="carvao" class="line_divisor">~~Carvão~~</div>
+        <div class="box">
+            <div class="boxImg">
+                <img src="./src/narguile_dourado.jpg" alt="">
+            </div>
+            <div class="boxImg">
+                <img src="./src/narguile_dourado.jpg" alt="">
+            </div>
+            <div class="boxImg">
+                <img src="./src/narguile_dourado.jpg" alt="">
+            </div>
+            <div class="boxImg">
+                <img src="./src/narguile_dourado.jpg" alt="">
+            </div>
+            <div class="boxImg">
+                <img src="./src/narguile_dourado.jpg" alt="">
+            </div>
+            <div class="boxImg">
+                <img src="./src/narguile_dourado.jpg" alt="">
+            </div>
+            <div class="boxImg">
+                <img src="./src/narguile_dourado.jpg" alt="">
+            </div>
+        </div>
+      
+        <div id="essencias" class="line_divisor">~~Essências~~</div>
+        <div class="box">
+            <div class="boxImg">
+                <img src="./src/narguile_dourado.jpg" alt="">
+            </div>
+            <div class="boxImg">
+                <img src="./src/narguile_dourado.jpg" alt="">
+            </div>
+            <div class="boxImg">
+                <img src="./src/narguile_dourado.jpg" alt="">
+            </div>
+            <div class="boxImg">
+                <img src="./src/narguile_dourado.jpg" alt="">
+            </div>
+            <div class="boxImg">
+                <img src="./src/narguile_dourado.jpg" alt="">
+            </div>
+            <div class="boxImg">
+                <img src="./src/narguile_dourado.jpg" alt="">
+            </div>
+            <div class="boxImg">
+                <img src="./src/narguile_dourado.jpg" alt="">
+            </div>
+        </div>
+        
+        </div>
+    </div>
+
+    <footer>
+        <div class="containerFooter">
+            <img class="caneta" src="img/caneta.png" alt="">
+            <div class="boxFooter">
+                <h1>Ajuda</h1>
+                <p onclick="ajuda()">Aqui</p>
+
+            </div>
+            <div id="contato" class="boxFooter">
+                <h1>Contato</h1>
+                <p>allahubhookah6@outlook.com </p>
+                <a style="text-decoration: none;" href="https://api.whatsapp.com/send?phone=5511947192426">
+                    <p>
+                        <img src="./src/icon/whatsapp.svg" alt="">
+                        +55 11 947192426
+                    </p>
+                </a>
+            </div>
+
+
+            <div class="boxFooter">
+                <h1> Siga-me
+
+                </h1>
+                <div onclick="face()" class="boxRedes">
+                    <img  src="./src/icon/facebook.svg" alt="">
+                    facebook
+                </div>
+                <div onclick="insta()" class="boxRedes">
+                    <img  src="./src/icon/instagram.svg" alt="">
+                    instagram
+                </div>
+            </div>
+
+            <img class="euFooter" src="./src/narguile_dourado.jpg" alt="">
+        </div>
+    </footer>
+
+</body>
+
+</html>
+<script>
+    function narguiles_func() {
+
+        window.location.href = "./index.html#narguiles"
+
+    }
+    function carvao_func() {
+
+        window.location.href = "./index.html#carvao"
+
+    }
+    function essencias_func() {
+
+        window.location.href = "./index.html#essencias"
+
+    }
+    function contato_func() {
+
+        window.location.href = "./index.html#contato"
+
+    }
+    function exclusivo() {
+
+
+    }
+    function chamar_menu() {
+        document.querySelector('#boxMenuId').classList.toggle("boxMenuAtivo")
+    }
+    function face() {
+        window.location.href = "https://www.facebook.com/allahubhookah6/"
+    } function insta() {
+        window.location.href = "https://www.instagram.com/allahubhookah6/"
+    }
+    function ajuda() {
+
+    }
+</script>

@@ -1,0 +1,371 @@
+* {
+    margin: 0;
+    cursor: default;
+}
+
+body {
+    background-color: black;
+}
+
+header {
+    width: 100%;
+    border-bottom: 2px solid purple;
+    position: fixed;
+    top: 0px;
+}
+
+.HeaderContainer {
+    width: 100%;
+    height: 8vh;
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nome {
+    display: flex;
+    align-items: center;
+    background: -webkit-linear-gradient(rgb(255, 0, 0), rgb(89, 0, 255), rgb(255, 1, 1));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+    font-family: Copperplate, Papyrus, fantasy;
+    cursor: default;
+    transition: 2s;
+    letter-spacing: 1px;
+    animation: nomeMove 2s infinite alternate ease-in-out;
+}
+@keyframes nomeMove{
+    to{
+    letter-spacing: 2px;
+    }
+}
+
+.HeaderContainer img {
+    height: 7vh;
+    border: purple solid 4px;
+    border-radius: 4vh;
+    justify-self: center;
+}
+
+.HeaderContainer ul {
+    width: 20vw;
+    display: flex;
+    margin-right: 4%;
+    justify-content: space-between;
+}
+
+.HeaderContainer li {
+    cursor: pointer;
+    font-family: fantasy;
+    color: rgb(255, 0, 0);
+    background: -webkit-linear-gradient(rgb(255, 0, 0), rgb(89, 0, 255), rgb(255, 1, 1));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    margin-top: 8vh;
+    background-color: black;
+}
+
+.line_divisor_1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    font-size: 6vh;
+    font-family: revert;
+    background: -webkit-linear-gradient(rgb(255, 0, 0), rgb(98, 3, 175), rgb(1, 255, 255));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.container_nargas {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border: solid 2px purple;
+    height: 50vh;
+    width: 50vw;
+    animation: borderContNargas 2s alternate ease-in-out infinite;
+    box-shadow: 10px 10px 23px 0px rgba(255, 0, 255, 1);
+    border-radius: 4vh;
+    background-color: black;
+}
+
+.nome_nargas {
+    height: 6vh;
+    width: 100%;
+    border: solid 2px purple;
+    border-radius: 4vh 4vh 0 0;
+    animation: borderContNargas 2s alternate ease-in-out infinite;
+    color: purple;
+    font-size: 4vh;
+    font-family: fantasy;
+    background: -webkit-linear-gradient(rgb(255, 0, 0), rgb(98, 3, 175), rgb(1, 255, 255));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+}
+
+.container_nargas img {
+    justify-self: center;
+    width: 60%;
+    height: 80%;
+    cursor: pointer
+}
+
+.preco_nargas {
+    text-align: center;
+    left: 40%;
+    bottom: 12%;
+    position: relative;
+    transform: rotate(320deg);
+    height: 5vh;
+    width: 16vw;
+    border: solid 2px purple;
+    animation: borderContNargas 2s alternate ease-in-out infinite;
+    font-size: 4vh;
+    font-family: revert;
+    background: -webkit-linear-gradient(rgb(255, 0, 0), rgb(77, 219, 255), rgb(1, 255, 255));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.btn_menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: black;
+    transition: 0.3s;
+    color: rgb(255, 0, 234);
+    font-family: fantasy;
+    cursor: pointer;
+}
+
+.boxMenu {
+    overflow: hidden;
+    align-self: flex-start;
+    position: fixed;
+    border-right: solid darkblue 2px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 20vw;
+    height: 92vh;
+    left: -800px;
+    background-color: black;
+    transition: 0.5s;
+}
+
+.boxMenuAtivo {
+    left: 0px;
+}
+
+.boxMenu h3 {
+    cursor: pointer;
+    text-align: center;
+    width: 100%;
+    font-size: 4vh;
+    background: -webkit-linear-gradient(rgb(255, 0, 0), rgb(204, 0, 255), rgb(1, 255, 255), rgb(1, 255, 255));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    border-top: darkblue solid 2px;
+    border-bottom: darkblue solid 2px;
+}
+
+.boxMenu img {
+    height: 50vh;
+    justify-self: flex-end;
+}
+
+.boxMenu h3:hover {
+    box-shadow: 0px -1px 31px -1px rgb(174, 0, 255);
+    color: black;
+    transform: scale(1.1);
+}
+
+.loading {
+    width: 80%;
+    height: 80%;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+    justify-self: center;
+}
+
+.loading img {
+    border: purple solid 4px;
+    border-radius: 4vh;
+    height: 20vh;
+    animation: moveLoading 1s ease-in-out alternate infinite;
+}
+
+.container_dois {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    background-color: black;
+    height: 100%;
+    width: 100%;
+}
+
+.box {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    border: purple solid 2px;
+    animation: borderContNargas 2s alternate ease-in-out infinite;
+    width: 80vw;
+    height: 80vh;
+    overflow: auto;
+    margin: 8vh;
+}
+
+.boxImg {
+    margin: 8vh;
+    height: 50vh;
+    width: 50vh;
+    animation: borderContNargas 2s alternate ease-in-out infinite;
+    border: solid 2px purple;
+}
+.boxImg img{
+    height: 49vh;
+}
+
+.line_divisor {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    font-size: 10vh;
+    font-family: revert;
+    background: -webkit-linear-gradient(rgb(255, 0, 0), rgb(98, 3, 175), rgb(1, 255, 255));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* personalizar a barra em geral, aqui estou definindo 10px de largura para a barra vertical
+e 10px de altura para a barra horizontal */
+::-webkit-scrollbar {
+    width:10px;
+    height: 10px;
+    }
+     
+    /* aqui é para personalizar o fundo da barra, neste caso estou colocando um fundo cinza escuro*/
+    ::-webkit-scrollbar-track {
+    background:rgb(0, 0, 0);
+    }
+     
+    /* aqui é a alça da barra, que demonstra a altura que você está na página
+    estou colocando uma cor azul clara nela*/
+    ::-webkit-scrollbar-thumb {
+    background: #ae00ff;
+    border-radius: 4vh;
+    }
+
+
+    footer {
+        width: 100%;
+        background-color: black;
+        display: flex;
+        justify-content: center;
+        border-top: rgb(23, 0, 128) solid 2px;
+        box-shadow: 0px 0px 12px 2px rgb(98, 0, 255);
+
+    }
+    
+    .containerFooter {
+        display: flex;
+        background-color: rgb(0, 0, 0);
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: center;
+        width: 90%;
+      border-right: 2px blue solid;
+      border-left: 2px blue solid;
+      box-shadow: 0px 0px 12px 2px rgb(98, 0, 255);
+
+    }
+    
+    .boxFooter {
+        margin: 2%;
+        display: flex;
+        flex-direction: column;
+        color: rgb(238, 0, 226);
+        text-align: center;
+    }
+    
+    .boxFooter p {
+        cursor: pointer;
+        transition: 1s;
+        font-weight: 900;
+        color: rgb(238, 0, 226);;
+    }
+    
+    .boxFooter p:hover {
+        color: purple;
+        background-color: rgb(91, 0, 238);
+        border-radius: 8vh;
+    }
+    
+    .boxFooter img {
+        background-color: rgb(238, 0, 226);
+        color: rgb(251, 255, 0);
+        cursor: pointer;
+        height: 3vh;
+        width: 3vh;
+        transition: 500ms;
+    }
+    .boxRedes{
+        display: flex;
+    }
+    .boxRedes:hover{
+        background-color: rgb(91, 0, 238);
+        border-radius: 8vh;
+    }
+    .euFooter {
+        border-radius: 45vh;
+        border:rgb(98, 0, 255) solid 4px;
+        box-shadow: 0px 0px 12px 2px rgb(98, 0, 255);
+        height: 24vh;
+    }
+    
+
+@keyframes moveLoading {
+    to {
+        border: rgb(255, 255, 255) solid 4px;
+        transform: rotateY(720deg);
+    }
+}
+
+@keyframes borderContNargas {
+    to {
+        border: solid 2px blue;
+    }
+}
+@media only screen and (max-width: 700px) {
+    .nome{
+        font-size: 1.6rem;
+    }
+    .container_nargas {
+        width: 70vw;
+    }
+    .boxMenu{
+        width: 100vw;
+    }
+}
