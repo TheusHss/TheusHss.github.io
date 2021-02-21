@@ -38,7 +38,7 @@ header {
 }
 @keyframes nomeMove{
     to{
-    letter-spacing: 2px;
+    letter-spacing: 1.5px;
     }
 }
 
@@ -75,18 +75,6 @@ header {
     background-color: black;
 }
 
-.line_divisor_1 {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    font-size: 6vh;
-    font-family: revert;
-    background: -webkit-linear-gradient(rgb(255, 0, 0), rgb(98, 3, 175), rgb(1, 255, 255));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
 .container_nargas {
     display: flex;
     flex-direction: column;
@@ -99,6 +87,7 @@ header {
     box-shadow: 10px 10px 23px 0px rgba(255, 0, 255, 1);
     border-radius: 4vh;
     background-color: black;
+    margin-top: 4vh;
 }
 
 .nome_nargas {
@@ -121,23 +110,6 @@ header {
     width: 60%;
     height: 80%;
     cursor: pointer
-}
-
-.preco_nargas {
-    text-align: center;
-    left: 40%;
-    bottom: 12%;
-    position: relative;
-    transform: rotate(320deg);
-    height: 5vh;
-    width: 16vw;
-    border: solid 2px purple;
-    animation: borderContNargas 2s alternate ease-in-out infinite;
-    font-size: 4vh;
-    font-family: revert;
-    background: -webkit-linear-gradient(rgb(255, 0, 0), rgb(77, 219, 255), rgb(1, 255, 255));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
 }
 
 .btn_menu {
@@ -316,6 +288,9 @@ e 10px de altura para a barra horizontal */
         font-weight: 900;
         color: rgb(238, 0, 226);;
     }
+    .boxFooter h1{
+color: rgb(0, 81, 255);
+    }
     
     .boxFooter p:hover {
         color: purple;
@@ -360,12 +335,29 @@ e 10px de altura para a barra horizontal */
 }
 @media only screen and (max-width: 700px) {
     .nome{
-        font-size: 1.6rem;
+        font-size: 1rem;
     }
     .container_nargas {
-        width: 70vw;
+        width: 90vw;
     }
     .boxMenu{
         width: 100vw;
+    }
+    .box{
+        width: 80vw;
+    }
+    .boxImg{
+        width: 40vh;
+        height: 40vh;
+    }
+    .boxImg img{
+        width: 38vh;
+        height: 38vh;
+    }
+    footer{
+        font-size: 1rem;
+    }
+    .containerFooter{
+        flex-direction: column;
     }
 }
