@@ -15,6 +15,26 @@ header {
     z-index: 8;
 }
 
+.barra {
+    background-color: #000000;
+    top: 0;
+    width: 100%;
+    z-index: 3;
+}
+
+.progress-container {
+    background: #000000;
+    height: 5px;
+    width: 100%;
+}
+
+/* A barra de progresso */
+.progress-bar {
+    background: purple;
+    height: 4px;
+    width: 0%;
+}
+
 .HeaderContainer {
     width: 100%;
     height: 8vh;
@@ -215,7 +235,7 @@ header {
     top: 0;
     position: relative;
     z-index: 5;
-    width: 100%;
+    width: 100vw;
     height: 100%;
     background-color: rgb(29, 26, 26);
 }
@@ -334,27 +354,6 @@ footer {
     animation: rotateLogo 2s infinite alternate ease-in-out;
 }
 
-.progress{
-    height: 15px;
-    background-color: #777;
-    position: relative;
-}
-
-.progress .progress-bar{
-   position: absolute;
-   height: 100%;
-   background-color: #add555;
-   animation: progress-animation 6s infinite;
-}
-
-
-@keyframes progress-animation{
-    0% { width: 0%; }
-    
-    100% { width: 100%}
-    
-}
-
 @keyframes rotateLogo{
     from{
         margin-left: 4%;
@@ -408,5 +407,8 @@ footer {
     }
     .containerFooter {
         flex-direction: column;
+    }
+    .boxGrande{
+        width: 100vw;
     }
 }

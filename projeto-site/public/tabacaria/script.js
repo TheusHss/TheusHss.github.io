@@ -18,10 +18,6 @@ function contato_func() {
     window.location.href = "./index.html#contato"
 
 }
-function exclusivo() {
-
-
-}
 function chamar_menu() {
     document.querySelectorAll.foreach('#boxMenuId').classList.toggle("boxMenuAtivo")
 }
@@ -39,3 +35,15 @@ function boxClickTwo(){
 function boxClickThree(){
     document.querySelector('#threeBox').classList.toggle("boxGrande")
 }
+showProgressBar = () => {
+    const winScroll =
+      document.body.scrollTop || document.documentElement.scrollTop;
+    const height =
+      document.documentElement.scrollHeight -
+      document.documentElement.clientHeight;
+    const scrolled = (winScroll / height) * 100;
+    document.getElementById("js-barraDeLeitura").style.width = `${scrolled}%`;
+  };
+  window.onscroll = () => {
+    showProgressBar();
+  };
