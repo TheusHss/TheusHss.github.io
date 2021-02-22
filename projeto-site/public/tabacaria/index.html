@@ -9,11 +9,15 @@
 </head>
 
 <body onmousedown="return false">
+    <div class="progress">
+        <div class="progress-bar"></div>
+    </div>
+    
     <header>
         <div class="HeaderContainer">
             <h1 class="nome">
                 <img src="./src/narguile_dourado.jpg" alt="">
-                Allahub hookah
+                <b>Allahub_hookah</b>
             </h1>
             <ul>
                 <li>Ajuda</li>
@@ -42,9 +46,9 @@
         </div>
     </div>
     <div class="container_dois">
-        <div id="narguiles" class="line_divisor">~~Narguiles~~</div>
+        <div id="narguiles" class="line_divisor">Narguiles</div>
 
-        <div class="box">
+        <div onclick="boxClickOne()" id="oneBox" class="box">
             <div class="boxImg">
                 <img src="./src/narguile_dourado.jpg" alt="">
             </div>
@@ -67,8 +71,9 @@
                 <img src="./src/narguile_dourado.jpg" alt="">
             </div>
         </div>
-        <div id="carvao" class="line_divisor">~~Carvão~~</div>
-        <div class="box">
+        <div id="carvao" class="line_divisor">Carvão</div>
+        <div onclick="boxClickTwo()" id="twoBox" class="box">
+
             <div class="boxImg">
                 <img src="./src/narguile_dourado.jpg" alt="">
             </div>
@@ -91,9 +96,10 @@
                 <img src="./src/narguile_dourado.jpg" alt="">
             </div>
         </div>
-      
-        <div id="essencias" class="line_divisor">~~Essências~~</div>
-        <div class="box">
+
+        <div id="essencias" class="line_divisor">Essências</div>
+        <div onclick="boxClickThree()" id="threeBox" class="box">
+
             <div class="boxImg">
                 <img src="./src/narguile_dourado.jpg" alt="">
             </div>
@@ -116,8 +122,8 @@
                 <img src="./src/narguile_dourado.jpg" alt="">
             </div>
         </div>
-        
-        </div>
+
+    </div>
     </div>
 
     <footer>
@@ -145,11 +151,11 @@
 
                 </h1>
                 <div onclick="face()" class="boxRedes">
-                    <img  src="./src/icon/facebook.svg" alt="">
+                    <img src="./src/icon/facebook.svg" alt="">
                     facebook
                 </div>
                 <div onclick="insta()" class="boxRedes">
-                    <img  src="./src/icon/instagram.svg" alt="">
+                    <img src="./src/icon/instagram.svg" alt="">
                     instagram
                 </div>
             </div>
@@ -161,40 +167,6 @@
 </body>
 
 </html>
-<script>
-    function narguiles_func() {
+<script src="./script.js">
 
-        window.location.href = "./index.html#narguiles"
-
-    }
-    function carvao_func() {
-
-        window.location.href = "./index.html#carvao"
-
-    }
-    function essencias_func() {
-
-        window.location.href = "./index.html#essencias"
-
-    }
-    function contato_func() {
-
-        window.location.href = "./index.html#contato"
-
-    }
-    function exclusivo() {
-
-
-    }
-    function chamar_menu() {
-        document.querySelector('#boxMenuId').classList.toggle("boxMenuAtivo")
-    }
-    function face() {
-        window.location.href = "https://www.facebook.com/allahubhookah6/"
-    } function insta() {
-        window.location.href = "https://www.instagram.com/allahubhookah6/"
-    }
-    function ajuda() {
-
-    }
 </script>
