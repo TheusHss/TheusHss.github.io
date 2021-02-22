@@ -19,7 +19,7 @@ function contato_func() {
 
 }
 function chamar_menu() {
-    document.querySelectorAll.foreach('#boxMenuId').classList.toggle("boxMenuAtivo")
+    document.querySelector('#boxMenuId').classList.toggle("boxMenuAtivo")
 }
 function face() {
     window.location.href = "https://www.facebook.com/allahubhookah6/"

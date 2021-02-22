@@ -162,6 +162,7 @@ header {
     left: -800px;
     background-color: black;
     transition: 0.5s;
+    z-index: 10;
 }
 
 .boxMenuAtivo {
