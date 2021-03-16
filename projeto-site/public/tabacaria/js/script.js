@@ -1,19 +1,23 @@
 function narguiles_func() {
+    document.querySelector('#boxMenuId').classList.toggle("boxMenuAtivo")
 
     window.location.href = "./index.html#narguiles"
 
 }
 function carvao_func() {
+    document.querySelector('#boxMenuId').classList.toggle("boxMenuAtivo")
 
     window.location.href = "./index.html#carvao"
 
 }
 function essencias_func() {
+    document.querySelector('#boxMenuId').classList.toggle("boxMenuAtivo")
 
     window.location.href = "./index.html#essencias"
 
 }
 function contato_func() {
+    document.querySelector('#boxMenuId').classList.toggle("boxMenuAtivo")
 
     window.location.href = "./index.html#contato"
 
@@ -26,24 +30,24 @@ function face() {
 } function insta() {
     window.location.href = "https://www.instagram.com/allahubhookah6/"
 }
-function boxClickOne(){
+function boxClickOne() {
     document.querySelector('#oneBox').classList.toggle("boxGrande")
 }
-function boxClickTwo(){
+function boxClickTwo() {
     document.querySelector('#twoBox').classList.toggle("boxGrande")
 }
-function boxClickThree(){
+function boxClickThree() {
     document.querySelector('#threeBox').classList.toggle("boxGrande")
 }
 showProgressBar = () => {
     const winScroll =
-      document.body.scrollTop || document.documentElement.scrollTop;
+        document.body.scrollTop || document.documentElement.scrollTop;
     const height =
-      document.documentElement.scrollHeight -
-      document.documentElement.clientHeight;
+        document.documentElement.scrollHeight -
+        document.documentElement.clientHeight;
     const scrolled = (winScroll / height) * 100;
     document.getElementById("js-barraDeLeitura").style.width = `${scrolled}%`;
-  };
-  window.onscroll = () => {
+};
+window.onscroll = () => {
     showProgressBar();
-  };
+};
