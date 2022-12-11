@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digitador</title>
+</head>
+<style>
+    *{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: rgb(8, 17, 43);
+}
+
+section{
+    height: 100vh;
+    width: 100vw;
+    background-color: rgb(8, 17, 43);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+#palavra_id{
+    font-size: 3rem;
+    padding: 2vh;
+    color: white;
+}
+
+#digitado_id{
+    font-size: 1rem;
+    background:none;
+    border: none;
+    border-bottom: white 2px solid;
+    outline: none;
+    color: white;
+    animation: mover infinite alternate 2s ease-in-out;
+}
+
+@keyframes mover {
+    from{
+        /* transform:scale(2);     */
+        transform: rotateX(0deg);    
+    }
+    to{
+        transform: rotatex(360deg);
+    }
+}
+
+#carrossel{
+    display: flex;
+}
+.carrossel2_passou{
+    font-size: 1.4rem;
+    padding: 2vh;
+    color: white;
+    opacity: 0.7;
+}
+.carrossel1_passou{
+    font-size: 1.8rem;
+    padding: 2vh;
+    color: white;
+    opacity: 0.8;
+}
+.carrossel_passou{
+    font-size: 2.2rem;
+    padding: 2vh;
+    color: white;
+    opacity: 0.9;
+}
+.carrossel_futura{
+    font-size: 2.2rem;
+    padding: 2vh;
+    color: white;
+    opacity: 0.9;
+}
+.carrossel1_futura{
+    font-size: 1.8rem;
+    padding: 2vh;
+    color: white;
+    opacity: 0.8;
+}
+.carrossel2_futura{
+    font-size: 1.4rem;
+    padding: 2vh;
+    color: white;
+    opacity: 0.7;
+}
+</style>
+
+<body>
+    <section>
+        <div id="carrossel">
+            <div id="passou_id3" class="carrossel2_passou"></div>
+            <div id="passou_id2" class="carrossel1_passou"></div>
+            <div id="passou_id" class="carrossel_passou"></div>
+            <div id="palavra_id"></div>
+            <div id="futura_id" class="carrossel_futura"></div>
+            <div id="futura_id2" class="carrossel1_futura"></div>
+            <div id="futura_id3" class="carrossel2_futura"></div>
+        </div>
+        <input id="digitado_id" type="text">
+    </section>
+</body>
+
+</html>
+<script>
+    const urlApi = "https://api.dicionario-aberto.net/random";
+    const palavraView = document.getElementById("palavra_id")
+    const digitadoView = document.getElementById("digitado_id")
+    const passouView = document.getElementById("passou_id")
+    const passouView2 = document.getElementById("passou_id2")
+    const passouView3 = document.getElementById("passou_id3")
+    const futuraView = document.getElementById("futura_id")
+    const futuraView2 = document.getElementById("futura_id2")
+    const futuraView3 = document.getElementById("futura_id3")
+    const config = {
+        qtdHistorico: 0
+    }
+    futuraView3.innerText = chamarPl()
+
+
+    reconstruir()
+
+    function reconstruir() {
+        setTimeout(() => {
+
+            if (digitadoView.value == palavraView.innerText) {
+                let palavraAntiga = palavraView.innerText;
+                let p;
+                if (config.qtdHistorico == 0) {
+                    futuraView2.innerText = chamarPl()
+                    futuraView.innerText = chamarPl()
+                    p = chamarPl()
+                }
+                else{
+                    p = futuraView.innerText
+                    futuraView.innerText = futuraView2.innerText
+                    futuraView2.innerText = futuraView3.innerText
+                    futuraView3.innerText = chamarPl()
+                }
+                validarConfig(palavraAntiga);
+                palavraView.innerText = p;
+                digitadoView.value = "";
+                futuraView.innerText = chamarPl()
+            }
+
+
+            reconstruir()
+        }, 50);
+    }
+
+    function validarConfig(plAntiga) {
+        if (config.qtdHistorico > 2) {
+            passouView3.innerText = passouView2.innerText;
+        }
+        if (config.qtdHistorico > 1) {
+            passouView2.innerText = passouView.innerText;
+        }
+        if (config.qtdHistorico > 0) {
+            passouView.innerText = plAntiga;
+        }
+
+
+        if (!(config.qtdHistorico % 2 == 0)) {
+            digitadoView.type = "password"
+        } else {
+            digitadoView.type = "text"
+
+        }
+        config.qtdHistorico++
+
+    }
+
+    function chamarPl() {
+        var xhttp = new XMLHttpRequest();
+        xhttp.open("GET", urlApi, false);
+        xhttp.send();
+
+        let p = JSON.parse(xhttp.responseText).word;
+        return p;
+    }
+
+</script>
