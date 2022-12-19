@@ -1,0 +1,70 @@
+<script>
+     function sequence() {
+        const alphabeto = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+        let sequence = "";
+        for (let x = 0; x < 10; x++) {
+            //alpha e beta
+            sequence += (Math.floor(Math.random() * (9 - 0) + 0)).toString() > 5 ? "A" : "B";
+            sequence += returnAB()
+            //x primeira divisão e y segunda
+            sequence += (Math.floor(Math.random() * (9 - 0) + 0)).toString() > 5 ? "X" : "Y";
+            sequence += returnAB()
+            //Cod complementar da divisao sigma e master
+            sequence += (Math.floor(Math.random() * (9 - 0) + 0)).toString() > 5 ? "S" : "M";
+            sequence += returnAB()
+
+            function returnAB() {
+                let ctr = ""
+                let num = (Math.floor(Math.random() * (10 - 0) + 0)).toString()
+                if (num % 2 == 0) {
+                    ctr = (Math.floor(Math.random() * (9 - 0) + 0)).toString()
+                } else {
+                    ctr = alphabeto[(Math.floor(Math.random() * (26 - 0) + 0)).toString()]
+                }
+                return ctr;
+            }
+        }
+        return sequence
+    }
+    function maskGenerator(v, m) {
+        var element = "";
+        var cont = 0;
+        for (let index = 0; index < m.length; index++) {
+            if (m[index] == "x") {
+                element += v[cont++]
+            } else {
+                element += m[index];
+            }
+        }
+
+
+        return element;
+    }
+
+    function initUltraHash(temMascara, mascara) {
+        let ns = sequence()
+        let mask = mascara || "xx.xxxx-xx.xxxx-xx.xxxx-xx.xxxx-xx.xxxx-xx.xxxx-xx.xxxx-xx.xxxx-xx.xxxx-xx.xxxx"
+        if (temMascara) {
+            return maskGenerator(ns, mask);
+        } else {
+            return ns;
+        }
+    }
+
+    var signF = window.prompt('Mask format default: xx.xxxx-xx.xxxx-xx.xxxx-xx.xxxx-xx.xxxx-xx.xxxx-xx.xxxx-xx.xxxx-xx.xxxx-xx.xxxx');
+
+    alert(initUltraHash(true, signF))
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
